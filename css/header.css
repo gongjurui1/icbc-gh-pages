@@ -1,0 +1,77 @@
+body{
+    -webkit-user-select:initial;
+    background-color: #e5e5e5;
+}
+/**/
+/*.ui-icon-search{font-size:50px;}*/
+/*.ui-searchbar .ui-icon-search{
+    font-size: 32px;}*/
+.ui-margintop{
+    margin-top: 5px;
+}
+.change-jianju{
+    padding-top:0;
+}
+.ui-bg-fff{
+    background: #FFFFFF;
+}
+.ui-header-padding{
+    padding: 0 44px;
+    height: 45px;
+    line-height: 45px;
+    background: #a00000;
+}
+
+.ui-header h1{
+    font-size: 19px;
+    padding:0 2px;
+}
+.ui-avatar-width{
+    position: absolute;
+    left: 10px;
+    top: 4px;
+    width: 36px;
+    height: 36px;
+}
+.ui-icon-position{
+    position: absolute;
+    right: 5px;
+    top: 0;
+}
+
+.text-align-center{
+    text-align: center;
+}
+
+/*footer end*/
+.footer{
+    text-align: center;
+    background: #efeff4;
+    height: 21px;
+    line-height: 21px;
+    color: #a6a6a6;
+    font-size: 9px;
+}
+.font12{
+    font-size: 12px!important;
+}
+.font14{
+    font-size: 14px!important;
+}
+.font16{
+    font-size: 16px!important;
+}
+/*dialog css*/
+.ui-dialog-ft.ui-btn-group button{
+    color: #777;
+}
+.ui-dialog-ft.ui-btn-group button.select{
+    color: #a00000;
+}
+
+.ui-dialog-cnt .ui-dialog-bd div div{
+    text-align: center;
+}
+.ui-checkbox input:checked:before, .ui-checkbox-s input:checked:before{
+    color: #a00000;
+}

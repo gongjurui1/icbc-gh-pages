@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="format-detection" content="telephone=no">
+    <title>index</title>
+    <link rel="stylesheet" href="css/frozen.css">
+    <link rel="stylesheet" href="font/iconfont.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/index.css" />
+    <script src="lib/zepto.min.js"></script>
+    <script src="js/frozen.js"></script>
+    <style>
+    .search-history .ui-header-padding {
+        padding: 0;
+    }
+    
+    .search-history .ui-header .ui-icon-return {
+        position: relative;
+        display: block;
+        height: 45px;
+    }
+    
+    .search-history .ui-searchbar-wrap {
+        background: none;
+    }
+    
+    .search-history .ui-searchbar-wrap .ui-searchbar-cancel {
+        color: #fff;
+    }
+    
+    .search-history .search-btn {
+        font-size: 16px;
+        display: inline-block;
+        padding: 0 5px;
+        right: 10px;
+    }
+    
+    .search-history .search-txt {
+        border-radius: 5px;
+        border: 0;
+        padding: 3px 12px;
+        width: 85%;
+    }
+    
+    .search-history .search-list {
+        background: #fff;
+    }
+    
+    .search-history .search-list li {
+        height: 60px;
+        line-height: 60px;
+        padding: 0 10px;
+        border-bottom: 1px #e5e5e5 solid;
+        max-width: 100%;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+    }
+    
+    .search-history .search-list li.clearup {
+        text-align: center;
+    }
+    
+    .search-history .ui-icon-search {
+        color: #8e8e93;
+    }
+    
+    .search-history .ui-icon-close {
+        color: #8e8e93
+    }
+    
+    .search-history .list {
+        background: #fff;
+    }
+    
+    .search-history .list li {
+        height: 48px;
+        line-height: 48px;
+        border-bottom: 1px #E5E5E5 solid;
+        padding-left: 10px;
+        margin-left: 10px;
+    }
+    
+    .search-history .list li:hover {
+        color: #565656;
+    }
+    </style>
+</head>
+
+<body class="search-history">
+    <header class="ui-header ui-header-positive ui-border-b ui-header-padding">
+        <div class="ui-searchbar-wrap ui-border-b focus">
+            <i class="iconfont ui-icon-return size-21" onclick="history.back()"></i>
+            <div class="ui-searchbar ui-border-radius">
+                <i class="iconfont ui-icon-search size-18"></i>
+                <!-- <div class="ui-searchbar-text">搜索</div> -->
+                <div class="ui-searchbar-input">
+                    <input value="" type="text" placeholder="搜索" autocapitalize="off">
+                </div>
+                <i class="iconfont ui-icon-close size-19"></i>
+            </div>
+            <button class="ui-searchbar-cancel">搜索</button>
+        </div>
+    </header>
+    <section class="ui-container">
+        <div class="ui-tab" id="peixunban">
+            <ul class="ui-tab-nav ui-border-b">
+                <li class="current">未报名</li>
+                <li>已报名</li>
+            </ul>
+            <ul class="ui-tab-content ui-margintop" style="width:200%" id="peixunban-content">
+                <!--未报名-->
+                <li class="current">
+                    <ul class="ui-list ui-border-tb  ui-list-margin" id="peixun-weibao">
+                        <li class="ui-border-t ui-row-flex ui-whitespace border-bottom">
+                            <div class="ui-list-img list-img-width margin-top-32">
+                                <span style="background-image:url(img/peixun/peixunlist.png)"></span>
+                            </div>
+                            <div class="ui-list-info color-font">
+                                <h4 class="ui-nowrap">客户经理班</h4>
+                                <div class="ui-nowrap nowrap-height">
+                                    <!--<i class="ui-icon-history ui-icon-size"></i>-->
+                                    <i class="iconfont icon-shijian yellow size-19"></i>2016-07-24--2017-08-09
+                                </div>
+                                <div class="ui-nowrap nowrap-height">
+                                    <i class="ui-icon-home ui-icon-size"></i>总行
+                                </div>
+                                <p class="ui-nowrap bao-ming-wrapper">
+                                    <i class="bao-ming">报名</i>
+                                </p>
+                            </div>
+                        </li>
+                        <li class="ui-border-t ui-row-flex ui-whitespace border-bottom">
+                            <div class="ui-list-img list-img-width margin-top-32">
+                                <span style="background-image:url(img/peixun/peixunlist.png)"></span>
+                            </div>
+                            <div class="ui-list-info color-font">
+                                <h4 class="ui-nowrap">客户经理班</h4>
+                                <div class="ui-nowrap nowrap-height">
+                                    <!--<i class="ui-icon-history ui-icon-size"></i>-->
+                                    <i class="iconfont icon-shijian yellow size-19"></i>2016-07-24--2017-08-09
+                                </div>
+                                <div class="ui-nowrap nowrap-height">
+                                    <i class="ui-icon-home ui-icon-size"></i>总行
+                                </div>
+                                <p class="ui-nowrap bao-ming-wrapper">
+                                    <i class="bao-ming">报名</i>
+                                </p>
+                            </div>
+                        </li>
+                    </ul>
+                </li>
+                <!--已报名-->
+                <li class="">
+                    <ul class="ui-list ui-border-tb  ui-list-margin" id="peixun-baoming">
+                        <li class="ui-border-t ui-row-flex ui-whitespace border-bottom" data-href="peixundetail.html">
+                            <div class="ui-list-img list-img-width margin-top-32">
+                                <span style="background-image:url(img/peixun/peixunlist.png)"></span>
+                            </div>
+                            <div class="ui-list-info color-font">
+                                <h4 class="ui-nowrap">客户经理班</h4>
+                                <div class="ui-nowrap nowrap-height">
+                                    <i class="iconfont icon-shijian yellow size-19"></i>2016-07-24--2017-08-09
+                                </div>
+                                <div class="ui-nowrap nowrap-height">
+                                    <i class="ui-icon-home ui-icon-size"></i>总行
+                                </div>
+                                <div class="ui-nowrap">学习中</div>
+                            </div>
+                        </li>
+                        <li class="ui-border-t ui-row-flex ui-whitespace border-bottom" data-href="peixundetail.html">
+                            <div class="ui-list-img list-img-width margin-top-32">
+                                <span style="background-image:url(img/peixun/peixunlist.png)"></span>
+                            </div>
+                            <div class="ui-list-info color-font">
+                                <h4 class="ui-nowrap">客户经理班</h4>
+                                <div class="ui-nowrap nowrap-height">
+                                    <!--<i class="ui-icon-history ui-icon-size"></i>-->
+                                    <i class="iconfont icon-shijian yellow size-19"></i>2016-07-24--2017-08-09
+                                </div>
+                                <div class="ui-nowrap nowrap-height">
+                                    <i class="ui-icon-home ui-icon-size"></i>总行
+                                </div>
+                                <div class="ui-nowrap">学习中</div>
+                            </div>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <!--         <ul class="list">
+    <li class="ui-arrowlink" data-href="anlidetail.html">
+        <span>客服人员培训案例</span>
+        <span class="ui-panel-title-tips">2016-07-31</span>
+    </li>
+    <li class="ui-arrowlink" data-href="anlidetail.html">
+        <span>客服人员培训案例</span>
+        <span class="ui-panel-title-tips">2016-07-31</span>
+    </li>
+</ul> -->
+    </section>
+    <!--     <script>
+$('.ui-icon-close').tap(function() {
+    $('.search-txt').val('')
+})
+</script> -->
+    <script type="text/javascript">
+    $('.ui-list li,.ui-tiled li').tap(function() {
+        if ($(this).data('href')) {
+            location.href = $(this).data('href');
+        }
+    });
+    /*tab切换*/
+    window.addEventListener('load', function() {
+            var tab = new fz.Scroll('.ui-tab', {
+                role: 'tab'
+                    //autoplay: true,
+                    //interval: 3000
+            });
+            /* 滑动开始前 */
+            tab.on('beforeScrollStart', function(fromIndex, toIndex) {
+                console.log(fromIndex, toIndex); // from 为当前页，to 为下一页
+            })
+        })
+        /*是否选课*/
+        //弹框显示是否删除
+
+    $('.bao-ming').tap(function() {
+        var dia = $.dialog({
+            title: '',
+            content: '报名成功，是否进入培训班?',
+            button: ["进入", "取消"]
+        });
+        //dia();
+        dia.on("dialog:action", function(e) {
+            e.stopPropagation();
+            if (e.index == 0) {
+                console.log('点了进入按钮');
+                //页面跳转
+                if ($('#peixun-baoming li').data('href')) {
+                    location.href = $('#peixun-baoming li').data('href');
+                }
+            } else if (e.index == 1) {
+                console.log('点了取消按钮');
+            }
+        });
+    })
+
+
+    //页面跳转
+    $('.ui-header i').click(function() {
+        if ($(this).data('href')) {
+            location.href = $(this).data('href');
+        }
+    });
+
+    $('.ui-icon-close').tap(function() {
+        $(this).parents().find('input').val('');
+    });
+    </script>
+</body>
+
+</html>

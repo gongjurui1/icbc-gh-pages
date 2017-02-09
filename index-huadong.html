@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="format-detection" content="telephone=no">
+    <title>中国工商银行网络大学</title>
+    <link rel="stylesheet" href="css/frozen.css">
+    <link rel="stylesheet" href="js/swiper.min.css" />
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/index.css" />
+    <script src="lib/zepto.min.js"></script>
+    <script src="js/frozen.js"></script>
+    <script src="js/swiper.jquery.min.js"></script>
+    <script src="js/jquery-1.11.3.js"></script>
+    <script src="js/ssss.js"></script>
+    <style>
+        .tzMod2 {
+            overflow: hidden;
+            white-space: nowrap;
+        }
+
+        .listWrap a, .listWrap a:link, .listWrap a:visited, .listWrap a:hover {
+            text-decoration: none;
+            line-height: 20px;
+        }
+
+        .tzMod2 {
+            height: 24px;
+            line-height: 24px;
+            margin: 10px 7px 0;
+            overflow: hidden;
+            white-space: nowrap;
+        }
+
+        .tzMod2 a {
+            overflow: hidden;
+            display: block;
+            float: left;
+            /* width: 196px*/
+        }
+
+        .tzMod2 .listWrap {
+            overflow: hidden;
+            display: block;
+            width: 500px; /*js获取自动宽度*/
+        }
+    </style>
+    <script>
+        var lee = jQuery.noConflict() ;
+        lee(function () {
+            lee(".tzMod2").scrollGrid()
+        });
+    </script>
+</head>
+
+<body ontouchstart>
+<header class="ui-header ui-header-positive ui-border-b ui-header-padding">
+        <span class="ui-avatar-tiled ui-avatar-width" data-href="myinfo.html"><span
+                style="background-image:url(img/indexImg/personalcenter.png)"></span></span>
+    <h1>网络大学</h1>
+    <!-- <i class="ui-icon-search ui-icon-position" data-href=""></i> -->
+</header>
+<section class="ui-container ui-container-change">
+    <!-- banner轮播 -->
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide"><img src="img/banner/banner1.jpg" alt=""></div>
+            <div class="swiper-slide"><img src="img/banner/banner2.jpg" alt=""></div>
+            <div class="swiper-slide"><img src="img/banner/banner3.jpg" alt=""></div>
+        </div>
+        <!-- 如果需要分页器 -->
+        <div class="swiper-pagination"></div>
+    </div>
+    <ul class="ui-row ui-whitespace-padding ui-margintop  ui-bg-fff" id="ui-icon-id">
+        <li class="ui-col ui-col-25" data-href="zixunlist.html">
+            <a href="##" class="ui-mess-img1"><img src="img/message/mes1.png" alt="" /></a>
+            <div class="ui-mes-imgbottom">
+                <a href="##">资讯</a>
+            </div>
+        </li>
+        <li class="ui-col ui-col-25" data-href="choosecourse/choosecourse.html">
+            <a href="##" class="ui-mess-img1"><img src="img/message/mes2.png" alt="" /></a>
+            <div class="ui-mes-imgbottom">
+                <a href="##">选课</a>
+            </div>
+        </li>
+        <li class="ui-col ui-col-25" data-href="peixun/peixun.html">
+            <a href="##" class="ui-mess-img1"><img src="img/message/mes3.png" alt="" /></a>
+            <div class="ui-mes-imgbottom">
+                <a href="##">培训班</a>
+            </div>
+        </li>
+        <li class="ui-col ui-col-25" data-href="test/test.html">
+            <a href="##" class="ui-mess-img1"><img src="img/message/mes4.png" alt="" /></a>
+            <div class="ui-mes-imgbottom">
+                <a href="##">测试</a>
+            </div>
+        </li>
+        <li class="ui-col ui-col-25" data-href="jiaocai/jiaocai.html">
+            <a href="##" class="ui-mess-img1"><img src="img/message/mes5.png" alt="" /></a>
+            <div class="ui-mes-imgbottom">
+                <a href="##">教材</a>
+            </div>
+        </li>
+        <li class="ui-col ui-col-25" data-href="anli/anli.html">
+            <a href="##" class="ui-mess-img1"><img src="img/message/mes6.png" alt="" /></a>
+            <div class="ui-mes-imgbottom">
+                <a href="##">案例</a>
+            </div>
+        </li>
+        <li class="ui-col ui-col-25" data-href="mycourse/mycourse.html">
+            <a href="##" class="ui-mess-img1"><img src="img/message/mes7.png" alt="" /></a>
+            <div class="ui-mes-imgbottom">
+                <a href="##">我的课程</a>
+            </div>
+        </li>
+        <li class="ui-col ui-col-25" data-href="myinfo.html">
+            <a href="##" class="ui-mess-img1"><img src="img/message/mes8.png" alt="" /></a>
+            <div class="ui-mes-imgbottom">
+                <a href="##">我的信息</a>
+            </div>
+        </li>
+    </ul>
+    <div class="ui-xuanchuan-banner ui-margintop">
+        <img src="img/banner/adv.jpg" alt="" />
+    </div>
+    <!--course-->
+    <section class="ui-course-tuijian ui-bg-fff ui-margintop">
+        <div class="ui-panel ui-panel-simple ui-border-tb">
+            <h2 class="ui-arrowlink">
+                <span class="ui-arrow-tuijian"></span>
+                <span class="ui-fontsize">推荐课程</span>
+                <span class="ui-panel-title-tips" data-href="recommendcourse.html">更多</span>
+            </h2>
+        </div>
+        <ul class="ui-grid-trisect change-jianju">
+            <li data-href="mycourse/coursedetail.html">
+                <div class="ui-grid-trisect-img ui-course-img">
+                    <span style="background-image:url(img/recomend1.png)"></span>
+                </div>
+               <!-- <div>
+                    <h4 class="ui-nowrap-multi ui-nowrap-fontsize">工行创新课程：高级客户经理课程</h4>
+                </div>-->
+                <div id="csfBottm" class="tzMod2">
+        <span class="listWrap">
+            <a title="" href="" class="ui-nowrap-fontsize">工行创新课程</a>
+        </span>
+                </div>
+            </li>
+            <li data-href="mycourse/coursedetail.html">
+                <div class="ui-grid-trisect-img ui-course-img">
+                    <span style="background-image:url(img/recommend2.png)"></span>
+                </div>
+                <div id="csfBottm1" class="tzMod2">
+        <span class="listWrap">
+            <a title="" href="" class="ui-nowrap-fontsize">工行创新课程</a>
+        </span>
+                </div>
+            </li>
+            <li data-href="mycourse/coursedetail.html">
+                <div class="ui-grid-trisect-img ui-course-img">
+                    <span style="background-image:url(img/recommend3.png)"></span>
+                </div>
+                <div id="csfBottm2" class="tzMod2">
+        <span class="listWrap">
+            <a title="" href="" class="ui-nowrap-fontsize">工行创新课程：高级客户经理课程&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </a>
+        </span>
+                </div>
+            </li>
+        </ul>
+    </section>
+    <!--new course-->
+    <section class="ui-course-tuijian ui-bg-fff ui-margintop">
+        <div class="ui-panel ui-panel-simple ui-border-tb">
+            <h2 class="ui-arrowlink">
+                <span class="ui-arrow-tuijian"></span>
+                <span class="ui-fontsize">最新课程</span>
+                <span class="ui-panel-title-tips" data-href="courselatest.html">更多</span>
+            </h2>
+        </div>
+        <ul class="ui-grid-trisect change-jianju">
+            <li data-href="mycourse/coursedetail.html">
+                <div class="ui-grid-trisect-img ui-course-img">
+                    <span style="background-image:url(img/new1.png)"></span>
+                </div>
+                <div id="csfBottm3" class="tzMod2">
+        <span class="listWrap">
+            <a title="" href="" class="ui-nowrap-fontsize">工行创新</a>
+        </span>
+                </div>
+            </li>
+            <li data-href="mycourse/coursedetail.html">
+                <div class="ui-grid-trisect-img ui-course-img">
+                    <span style="background-image:url(img/new2.png)"></span>
+                </div>
+                <div id="csfBottm4" class="tzMod2">
+        <span class="listWrap">
+            <a title="" href="" class="ui-nowrap-fontsize">工行创新课程：高级客户经理课程&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </a>
+        </span>
+                </div>
+            </li>
+            <li data-href="mycourse/coursedetail.html">
+                <div class="ui-grid-trisect-img ui-course-img">
+                    <span style="background-image:url(img/new3.png)"></span>
+                </div>
+                <div id="csfBottm5" class="tzMod2">
+        <span class="listWrap">
+            <a title="" href="" class="ui-nowrap-fontsize">工行创新课程：高级客户经理课程&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </a>
+        </span>
+                </div>
+            </li>
+        </ul>
+    </section>
+    <!--peixunban-->
+    <section class="ui-course-tuijian ui-bg-fff ui-margintop">
+        <div class="ui-panel ui-panel-simple ui-border-tb">
+            <h2 class="ui-arrowlink">
+                <span class="ui-arrow-tuijian"></span>
+                <span class="ui-fontsize">培训班</span>
+                <span class="ui-panel-title-tips" data-href="peixun/peixun.html">更多</span>
+            </h2>
+        </div>
+        <ul class="ui-grid-trisect change-jianju">
+            <li data-href="peixun/peixundetail.html">
+                <div class="ui-grid-trisect-img ui-course-img">
+                    <span style="background-image:url(img/class1.png)"></span>
+                </div>
+                <div id="csfBottm6" class="tzMod2">
+        <span class="listWrap">
+            <a title="" href="" class="ui-nowrap-fontsize">工行创新课程</a>
+        </span>
+                </div>
+            </li>
+            <li data-href="peixun/peixundetail.html">
+                <div class="ui-grid-trisect-img ui-course-img">
+                    <span style="background-image:url(img/class2.png)"></span>
+                </div>
+                <div id="csfBottm7" class="tzMod2">
+        <span class="listWrap">
+            <a title="" href="" class="ui-nowrap-fontsize">工行创新课程：高级客户经理课程&nbsp; &nbsp; &nbsp; </a>
+        </span>
+                </div>
+            </li>
+            <li data-href="peixun/peixundetail.html">
+                <div class="ui-grid-trisect-img ui-course-img">
+                    <span style="background-image:url(img/class3.png)"></span>
+                </div>
+                <div id="csfBottm8" class="tzMod2">
+        <span class="listWrap">
+            <a title="" href="" class="ui-nowrap-fontsize">工行创新课程</a>
+        </span>
+                </div>
+            </li>
+        </ul>
+    </section>
+</section>
+<footer class="footer">
+    中国工商银行版权所有　京ICP证 030247号
+</footer>
+<script>
+    $('.ui-list li,.ui-tiled li ,div,li,h4').tap(function() {
+        if ($(this).data('href')) {
+            location.href = $(this).data('href');
+        }
+    });
+    //头像链接
+    $('.ui-avatar-tiled').tap(function() {
+        if ($(this).data('href')) {
+            location.href = $(this).data('href');
+        }
+    });
+    //页面跳转
+    $('.ui-row li').tap(function() {
+        if ($(this).data('href')) {
+            location.href = $(this).data('href');
+        }
+    });
+    $('.ui-arrowlink span').tap(function() {
+        if ($(this).data('href')) {
+            location.href = $(this).data('href');
+        }
+    });
+
+
+
+    var mySwiper = new Swiper('.swiper-container', {
+        direction: 'horizontal',
+        loop: true,
+        autoplay: 3000,
+
+        // 如果需要分页器
+        pagination: '.swiper-pagination',
+
+        // 如果需要前进后退按钮
+        nextButton: '.swiper-button-next',
+        prevButton: '.swiper-button-prev',
+
+        // 如果需要滚动条
+        //scrollbar: '.swiper-scrollbar',
+    });
+
+    //设置banner宽高比  图片尺寸要求为 640X220 像素
+    var width = $(window).width();
+    $('.swiper-container').css({height: '110px'});
+
+    //每隔四个去掉边框，加no-border样式
+    $('.wf-ul li').each(function() {
+        var index = $(this).index() + 1;
+        if (index % 4 == 0) {
+            $(this).addClass('no-border');
+        };
+    });
+</script>
+</body>
+
+</html>

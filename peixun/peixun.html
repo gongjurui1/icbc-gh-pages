@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+
+<head lang="en">
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="format-detection" content="telephone=no">
+    <title>陪训班</title>
+
+    <link rel="stylesheet" href="../css/frozen.css">
+    <link rel="stylesheet" href="../font/iconfont.css">
+    <link rel="stylesheet" href="../css/header.css">
+    <link rel="stylesheet" href="../css/index.css" />
+    <script src="../lib/zepto.min.js"></script>
+    <script src="../js/frozen.js"></script>
+                <style>
+                    .pic-text-center{
+                        vertical-align: middle;
+                    }
+                    .pic-text-center i{
+                        height: 26px;
+                        display: inline-block;
+                    }
+                    .pic-text-center span{
+                        display: inline-block;
+                    }
+                </style>
+</head>
+
+<body>
+    <header class="ui-header ui-header-positive ui-border-b ui-header-padding">
+        <i class="iconfont ui-icon-return size-21" onclick="history.back()"></i>
+        <h1>培训班</h1>
+        <i class="iconfont ui-icon-search ui-icon-position size-26" data-href="../history.html"></i>
+    </header>
+    <section class="ui-container">
+        <div class="ui-tab" id="peixunban">
+            <ul class="ui-tab-nav ui-border-b">
+                <li class="current">未报名</li>
+                <li>已报名</li>
+            </ul>
+            <ul class="ui-tab-content ui-margintop" style="width:200%" id="peixunban-content">
+                <!--未报名-->
+                <li class="current">
+                    <ul class="ui-list ui-border-tb  ui-list-margin" id="peixun-weibao">
+                        <li class="ui-border-t ui-row-flex ui-whitespace border-bottom">
+                            <div class="ui-list-img list-img-width margin-top-32">
+                                <span style="background-image:url(../img/peixun/peixunlist.png)"></span>
+                            </div>
+                            <div class="ui-list-info color-font">
+                                <h4 class="ui-nowrap">客户经理班</h4>
+                                <div class="ui-nowrap nowrap-height">
+                                
+                                    <i class="iconfont icon-shijian yellow size-19"></i>2016-07-24--2017-08-09
+                                </div>
+                                <div class="ui-nowrap nowrap-height  pic-text-center">
+                                    <i class="iconfont icon-home yellow size-19"></i>
+                                        <span>总行</span>
+                                </div>
+                                <p class="ui-nowrap bao-ming-wrapper">
+                                    <i class="bao-ming">报名</i>
+                                </p>
+                            </div>
+                        </li>
+                        <li class="ui-border-t ui-row-flex ui-whitespace border-bottom">
+                            <div class="ui-list-img list-img-width margin-top-32">
+                                <span style="background-image:url(../img/peixun/peixunlist.png)"></span>
+                            </div>
+                            <div class="ui-list-info color-font">
+                                <h4 class="ui-nowrap">客户经理班</h4>
+                                <div class="ui-nowrap nowrap-height">
+                                    <!--<i class="ui-icon-history ui-icon-size"></i>-->
+                                    <i class="iconfont icon-shijian yellow size-19"></i>2016-07-24--2017-08-09
+                                </div>
+                                <div class="ui-nowrap nowrap-height  pic-text-center">
+                                    <i class="iconfont icon-home yellow size-19"></i>
+                                        <span>总行</span>
+                                </div>
+                                <p class="ui-nowrap bao-ming-wrapper">
+                                    <i class="bao-ming">报名</i>
+                                </p>
+                            </div>
+                        </li>
+                    </ul>
+                </li>
+                <!--已报名-->
+                <li class="">
+                    <ul class="ui-list ui-border-tb  ui-list-margin" id="peixun-baoming">
+                        <li class="ui-border-t ui-row-flex ui-whitespace border-bottom" data-href="peixundetail.html">
+                            <div class="ui-list-img list-img-width margin-top-32">
+                                <span style="background-image:url(../img/peixun/peixunlist.png)"></span>
+                            </div>
+                            <div class="ui-list-info color-font">
+                                <h4 class="ui-nowrap">客户经理班</h4>
+                                <div class="ui-nowrap nowrap-height">
+                                    <i class="iconfont icon-shijian yellow size-19"></i>2016-07-24--2017-08-09
+                                </div>
+                                <div class="ui-nowrap ui-row-flex line-25">
+                                    <div class="ui-col pic-text-center">
+                                        <i class="iconfont icon-home yellow size-19"></i>
+                                        <span>总行</span>
+                                    </div>
+                                    <div class="ui-col text-align-center">必修</div>
+                                    <div class="ui-col text-align-right">学习中</div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="ui-border-t ui-row-flex ui-whitespace border-bottom" data-href="peixundetail.html">
+                            <div class="ui-list-img list-img-width margin-top-32">
+                                <span style="background-image:url(../img/peixun/peixunlist.png)"></span>
+                            </div>
+                            <div class="ui-list-info color-font">
+                                <h4 class="ui-nowrap">客户经理班</h4>
+                                <div class="ui-nowrap nowrap-height">
+                                    <i class="iconfont icon-shijian yellow size-19"></i>2016-07-24--2017-08-09
+                                </div>
+                                <div class="ui-nowrap ui-row-flex">
+                                    <div class="ui-col pic-text-center">
+                                        <i class="iconfont icon-home yellow size-19"></i>
+                                        <span>总行</span>
+                                    </div>
+                                    <div class="ui-col">学习中</div>
+                                </div>
+                                
+                            </div>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </section>
+    <script type="text/javascript">
+        $('.ui-list li,.ui-tiled li').tap(function() {
+            if ($(this).data('href')) {
+                location.href = $(this).data('href');
+            }
+        });
+    /*tab切换*/
+        window.addEventListener('load', function() {
+            var tab = new fz.Scroll('.ui-tab', {
+                role: 'tab'
+                //autoplay: true,
+                //interval: 3000
+            });
+            /* 滑动开始前 */
+            tab.on('beforeScrollStart', function(fromIndex, toIndex) {
+                console.log(fromIndex, toIndex); // from 为当前页，to 为下一页
+            })
+        })
+        /*是否选课*/
+        //弹框显示是否删除
+
+    $('.bao-ming').tap(function() {
+        var dia = $.dialog({
+            title: '',
+            content: '报名成功，是否进入培训班?',
+            button: ["进入", "取消"]
+        });
+        //dia();
+        dia.on("dialog:action", function(e) {
+            e.stopPropagation();
+            if (e.index == 0) {
+                console.log('点了进入按钮');
+                //页面跳转
+                if ($('#peixun-baoming li').data('href')) {
+                    location.href = $('#peixun-baoming li').data('href');
+                }
+            } else if (e.index == 1) {
+                console.log('点了取消按钮');
+            }
+        });
+    })
+
+
+    //页面跳转
+    $('.ui-header i').click(function() {
+        if ($(this).data('href')) {
+            location.href = $(this).data('href');
+        }
+    });
+    </script>
+</body>
+
+</html>

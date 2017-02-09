@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>选课</title>
+    <link rel="stylesheet" href="../css/jquery.mobile-1.1.2.css"/>
+
+    <link rel="stylesheet" href="../css/frozen.css">
+    <link rel="stylesheet" href="../font/iconfont.css"/>
+    <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="../css/header.css">
+    <!-- <script src="../lib/zepto.min.js"></script> -->
+    <script src="../lib/pages/jquery.js"></script>
+    <script src="../lib/pages/jquery.mobile-1.1.2.js"></script>
+    <script>
+        $(function () {
+            var arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13],
+                    perPage = 3,
+                    pages = Math.ceil(arr.length / perPage);
+            for (var i = 1; i <= pages; i++) {
+                $('#container').append('<div data-role="page" id="' + 'num' + i + '">' + '<header class="ui-header ui-header-positive ui-border-b ui-header-padding">' + '<i class="ui-icon-return" onclick="history.back()"></i>' + '<h1>测试详情页</h1>' + '</header>' + '<div data-role="content" class="ui-container">   ' + i * 100 + '</div>' + '<div data-role="footer" data-theme="d">' + '  <div class="pages">' + '        <a href="' + '#num' + ((i - 1) > 0 ? (i - 1) : 0) + '">上一页</a>' + '     <a href="#" class="jiaojuan">交卷</a>' + '        <a href="' + '#num' + ((i + 1) < pages ? (i + 1) : i) + '">下一页</a>' + ' </div>' + '</div>' + '</div>');
+            }
+        });
+
+
+        $('.ui-loader').remove();
+
+        $(document).ready(function () {
+            //页面跳转
+            $('.ui-list-img,.ui-list-info h4,.ui-icon-search').tap(function () {
+                if ($(this).data('href')) {
+                    location.href = $(this).data('href');
+                }
+            });
+
+
+            //一级分类的页面跳转
+            $('.ui-list li').tap(function () {
+                if ($(this).data('href')) {
+                    location.href = $(this).data('href');
+                }
+            });
+
+            //二级分类的页面跳转
+            $('.right-side li').tap(function () {
+                if ($(this).data('href')) {
+                    location.href = $(this).data('href');
+                }
+            });
+            //left-side按钮事件
+            $('.second-class .left-side li').tap(function () {
+                var $rightSide = $('.second-class .right-side');
+                var index = $(this).index();
+                $(this).addClass('active').siblings().removeClass('active');
+                $rightSide.eq(index).removeClass('hide').siblings().addClass('hide');
+            });
+
+            //搜索按钮
+
+            $('.ui-searchbar').tap(function () {
+                $('.ui-searchbar-wrap').addClass('focus');
+                $('.ui-searchbar-input input').focus();
+            });
+            $('.ui-searchbar-cancel').tap(function (e) {
+                console.log(1)
+                $(this).parent('.ui-searchbar-wrap.ui-border-b').removeClass('focus');
+                return false;
+            });
+        })
+    </script>
+</head>
+
+<body>
+    <div id="container" class="xuanke">
+        <!-- 选课页面标记xuanke -->
+        <div data-role="page" id="num0">
+            <!-- 一级页面 -->
+            <header class="ui-header ui-header-positive ui-border-b ui-header-padding">
+                <i class="iconfont ui-icon-return size-21" onclick="history.back()"></i>
+                <h1>课程分类</h1>
+                <i class="iconfont ui-icon-search ui-icon-position size-26" data-href="../history.html"></i>
+            </header>
+            <div data-role="content" class="ui-container">
+                <ul class="ui-list ui-list-link ui-border-tb">
+                    <li class="ui-border-t" data-href="#num00">
+                        <div class="ui-list-info">
+                            <h4 class="ui-nowrap">经营管理</h4>
+                        </div>
+                    </li>
+                    <li class="ui-border-t" data-href="#num01">
+                        <div class="ui-list-info">
+                            <h4 class="ui-nowrap">零售金融业务</h4>
+                        </div>
+                    </li>
+                    <li class="ui-border-t">
+                        <div class="ui-list-info">
+                            <h4 class="ui-nowrap">互联网金融</h4>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+
+        <div data-role="page" id="num00">
+            <!-- 二级页面 -->
+            <header class="ui-header ui-header-positive ui-border-b ui-header-padding">
+                <i class="iconfont ui-icon-return size-21" onclick="history.back()"></i>
+                <h1>经营管理</h1>
+                <i class="iconfont ui-icon-search ui-icon-position size-26" data-href="../history.html"></i>
+            </header>
+            <div data-role="content" class="second-class ui-container">
+                <ul class="left-side">
+                    <li class="active">经营管理</li>
+                    <li>经营管理</li>
+                    <li>经营管理</li>
+					<li>经营管理</li>
+					<li>经营管理</li>
+					<li>经营管理</li>
+					<li>经营管理</li>
+					<li>经营管理</li>
+					<li>经营管理</li>
+					<li>经营管理</li>
+					<li>经营管理</li>
+					<li>经营管理</li>
+                </ul>
+                <ul class="right-side">
+                    <li data-href="#num000">催收岗111</li>
+                    <li>市场营销岗</li>
+                    <li>风控岗</li>
+                    <li>审计岗</li>
+                    <li>产品岗</li>
+                    <li>战略规划战略规划岗</li>
+                    <li>结算岗</li>
+					<li>昨夜星辰</li>
+					<li>我在这儿</li>
+					<li>我乃宙斯</li>
+					<li>如雷贯耳</li>
+					<li>这一路走来，我有很多名号就将就将军军军军军军军军军军军军军军军军军军军军军军军军军</li>
+					<li>行者，悟空</li>
+					<li>可我最欢喜的</li>
+					<li>还是</li>
+					<li>魂之挽歌</li>
+					<li>我刷我刷我刷刷刷</li>
+					<li>我还能吃下一条凤尾鱼</li>
+					<li>我还能吃下一只鳞虾</li>
+					<li>卡尔，是你吗</li>
+					<li>征战号角</li>
+					<li>响彻全场</li>
+					<li>啧啧啧啧啧啧啧啧</li>
+					<li>目标，采石场</li>
+					<li>厄洛斯赐予我力量</li>
+					<li>我的暗杀名单上有五个名字</li>
+					<li>既然你已出价，你要取谁的首级</li>
+					<li>席美尔的精华脉冲</li>
+                </ul>
+                <ul class="right-side hide">
+                    <!-- <li>催收岗222</li>
+                    <li>市场营销岗</li>
+                    <li>风控岗</li>
+                    <li>审计岗</li>
+                    <li>产品岗</li>
+                    <li>战略规划战略规划岗</li>
+                    <li>结算岗</li> -->
+                </ul>
+                <ul class="right-side hide">
+                    <li>催收岗333</li>
+                    <li>市场营销岗</li>
+                    <li>风控岗</li>
+                    <li>审计岗</li>
+                    <li>产品岗</li>
+                    <li>战略规划战略规划岗</li>
+                    <li>结算岗</li>
+                </ul>
+            </div>
+        </div>
+		<div data-role="page" id="num01">
+            <!-- 二级页面 -->
+            <header class="ui-header ui-header-positive ui-border-b ui-header-padding">
+                <i class="ui-icon-return" onclick="history.back()"></i>
+                <h1>零售金融业务</h1>
+                <i class="ui-icon-search ui-icon-position" data-href="../history.html"></i>
+            </header>
+            <div data-role="content" class="second-class ui-container">
+                <ul class="left-side">
+                    <li class="active">零售金融业务</li>
+                    <li>零售金融业务</li>
+                    <li>零售金融业务</li>
+                </ul>
+                <ul class="right-side">
+                    <li data-href="#num000">催收岗444</li>
+                    <li>市场营销岗</li>
+                    <li>风控岗</li>
+                    <li>审计岗</li>
+                    <li>产品岗</li>
+                    <li>战略规划战略规划岗</li>
+                    <li>结算岗</li>
+                </ul>
+                <ul class="right-side hide">
+                    <li>催收岗555</li>
+                    <li>市场营销岗</li>
+                    <li>风控岗</li>
+                    <li>审计岗</li>
+                    <li>产品岗</li>
+                    <li>战略规划战略规划岗</li>
+                    <li>结算岗</li>
+                </ul>
+                <ul class="right-side hide">
+                    <li>催收岗666</li>
+                    <li>市场营销岗</li>
+                    <li>风控岗</li>
+                    <li>审计岗</li>
+                    <li>产品岗</li>
+                    <li>战略规划战略规划岗</li>
+                    <li>结算岗</li>
+                </ul>
+            </div>
+        </div>
+        <!-- 三级页面 -->
+        <div data-role="page" id="num000">
+            <!-- 二级页面 -->
+            <header class="ui-header ui-header-positive ui-border-b ui-header-padding">
+                <i class="iconfont ui-icon-return size-21" onclick="history.back()"></i>
+                <h1>
+                    <span>
+                        互联网金融
+                        <i class="icon-slide-down"></i>
+                    </span>
+                </h1>
+                
+            </header>
+            <ul class="gangwei-ul">
+                <li>战略规划岗</li>
+                <li>产品岗</li>
+                <li>战略规划战略规划岗</li>
+                <li>结算岗</li>
+            </ul>
+            <ul class="right-side hide">
+                <li>催收岗222</li>
+                <li>市场营销岗</li>
+                <li>风控岗</li>
+                <li>审计岗</li>
+                <li>产品岗</li>
+                <li>战略规划战略规划岗</li>
+                <li>结算岗</li>
+            </ul>
+            <ul class="right-side hide">
+                <li>催收岗333</li>
+                <li>市场营销岗</li>
+                <li>风控岗</li>
+                <li>审计岗</li>
+                <li>产品岗</li>
+                <li>战略规划战略规划岗</li>
+                <li>结算岗</li>
+            </ul>
+        </div>
+    </div>
+    <!-- 三级页面 -->
+    <div data-role="page" id="num000">
+        <!-- 二级页面 -->
+        <header class="ui-header ui-header-positive ui-border-b ui-header-padding">
+            <i class="iconfont ui-icon-return size-21" onclick="history.back()"></i>
+
+            <h1 class="three-tips">
+                <span>互联网金融互联网金融互联网金融</span>
+                <i class="icon-slide-down"></i>
+            </h1>
+
+        </header>
+        <ul class="gangwei-ul">
+            <li>战略规划岗</li>
+            <li>产品岗</li>
+            <li>大堂经理</li>
+            <li>柜员</li>
+            <li>结算岗</li>
+            <li>运营</li>
+            <li>管理岗</li>
+            <li>业务岗</li>
+            <li>财务刚</li>
+            <li>授信审察岗</li>
+            <li>信托经理</li>
+            <li>投资顾问</li>
+            <li>全部</li>
+        </ul>
+        <div data-role="content" class="ui-container">
+            <div class="ui-searchbar-wrap ui-border-b">
+                <div class="ui-searchbar ui-border-radius">
+                    <i class="iconfont ui-icon-search size-18"></i>
+
+                    <div class="ui-searchbar-text">搜索</div>
+                    <div class="ui-searchbar-input">
+                        <input value="" type="tel" placeholder="搜索" autocapitalize="off">
+                    </div>
+                    <i class="iconfont ui-icon-close"></i>
+                </div>
+                <a class="ui-searchbar-cancel">搜索</a>
+                <!-- 此处不可以用button -->
+            </div>
+            <ul class="ui-list choose-list bg-fff">
+                <li class="ui-border-t ui-row-flex ui-whitespace" data-href="../mycourse/coursedetail-02.html">
+                    <div class="ui-list-img list-img-width">
+                        <span style="background-image:url(../img/peixun/peixunlist.png)"></span>
+                    </div>
+                    <div class="ui-list-info">
+                        <h4 class="ui-nowrap">客户经理班</h4>
+
+                        <div class="ui-row-flex color-font ui-margintop">
+                            <div class="ui-col ui-col">
+                                <i class="iconfont icon-dianzan size-21 no-align"></i>100
+                            </div>
+                            <div class="ui-col ui-col"><i class="iconfont icon-shoucang size-19 no-align"></i>100</div>
+                        </div>
+                    </div>
+                </li>
+                <li class="ui-border-t ui-row-flex ui-whitespace" data-href="../mycourse/coursedetail-02.html">
+                    <div class="ui-list-img list-img-width">
+                        <span style="background-image:url(../img/peixun/peixunlist.png)"></span>
+                    </div>
+                    <div class="ui-list-info">
+                        <h4 class="ui-nowrap">客户经理班</h4>
+
+                        <div class="ui-row-flex color-font ui-margintop">
+                            <div class="ui-col ui-col">
+                                <i class="iconfont icon-dianzan size-21 no-align"></i>1000
+                            </div>
+                            <div class="ui-col ui-col"><i class=" iconfont icon-shoucang size-19 no-align"></i>100</div>
+                        </div>
+                    </div>
+                </li>
+                <li class="ui-border-t ui-row-flex ui-whitespace" data-href="../mycourse/coursedetail-02.html">
+                    <div class="ui-list-img list-img-width">
+                        <span style="background-image:url(../img/peixun/peixunlist.png)"></span>
+                    </div>
+                    <div class="ui-list-info">
+                        <h4 class="ui-nowrap">客户经理班</h4>
+
+                        <div class="ui-row-flex color-font ui-margintop">
+                            <div class="ui-col ui-col">
+                                <i class="iconfont icon-dianzan size-21  no-align"></i>1000
+                            </div>
+                            <div class="ui-col ui-col"><i class=" iconfont icon-shoucang size-19  no-align"></i>100
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+<script type="text/javascript">
+
+    $('.ui-list li,.ui-tiled li').tap(function () {
+        if ($(this).data('href')) {
+            location.href = $(this).data('href');
+        }
+    });
+    $('.ui-header h1.three-tips').click(function () {
+        var sure = $(this).children('i').hasClass('icon-slide-shou');
+        if (!sure) {
+            $(this).children('i').addClass('icon-slide-shou');
+            $('.gangwei-ul').slideDown();
+            $('.ui-container').addClass('bg-opacity');
+        } else {
+            $(this).children('i').removeClass('icon-slide-shou');
+            $('.gangwei-ul').slideUp();
+            $('.ui-container').removeClass('bg-opacity');
+        }
+
+    });
+    var html= $('.ui-header h1.three-tips span').html();
+    if(html.length>=9){
+        $('.ui-header h1.three-tips span').addClass('ui-nowrap');
+    }
+
+    $('.ui-icon-return').click(function () {
+        $('.ui-container').removeClass('bg-opacity');
+    })
+</script>
+</body>
+
+</html>

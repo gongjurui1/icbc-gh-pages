@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="format-detection" content="telephone=no">
+    <title>我的收藏</title>
+    <link rel="stylesheet" href="font/iconfont.css"/>
+    <link rel="stylesheet" href="css/frozen.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/index.css"/>
+    <script src="lib/zepto.min.js"></script>
+    <script src="js/frozen.js"></script>
+</head>
+<body>
+<header class="ui-header ui-header-positive ui-border-b ui-header-padding">
+    <i class="ui-icon-return" onclick="history.back()"></i>
+    <h1>我的收藏</h1>
+    <i class="ui-icon-delete ui-icon-position" data-href=""></i>
+</header>
+<footer class="ui-footer ui-footer-btn">
+
+    <ul class="ui-tiled ui-border-t">
+        <li class="ui-border-r">
+            <div class="total-all">全选</div>
+        </li>
+        <li class="ui-border-r">
+            <div class="total-delete">删除</div>
+        </li>
+    </ul>
+
+</footer>
+<section class="ui-container shoucang">
+    <div class="ui-tab" id="peixunban">
+        <ul class="ui-tab-nav ui-border-b">
+            <li class="current" id="shou-course">课程</li>
+            <li id="shou-peixun">培训班</li>
+        </ul>
+        <ul class="ui-tab-content ui-margintop" style="width:200%" id="shoucang">
+            <!--课程-->
+            <li class="current">
+                <ul class="ui-list ui-border-tb  ui-list-margin" id="shoucang-course">
+                    <li class="ui-border-t ui-row-flex ui-whitespace border-bottom">
+
+                        <label class="ui-checkbox-s verti-align">
+                            <input type="checkbox">
+                        </label>
+
+                        <div class="ui-list-img" data-href="mycourse/coursedetail.html">
+                            <span style="background-image:url(img/peixun/peixunlist.png)"></span>
+                        </div>
+                        <div class="ui-list-info" data-href="mycourse/coursedetail.html">
+                            <h4 class="ui-nowrap" >客户经理班,从0开始迅速培养能力能力</h4>
+                            <div class="ui-row-flex color-font margin-top-20 ">
+                                <div class="ui-col ui-nowrap">
+                                    <i class="iconfont icon-liulan yellow size-19 no-align"></i>1000
+                                </div>
+                                <div class="ui-col ui-nowrap">
+                                    <i class="iconfont icon-dianzan yellow size-21"></i>10
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="ui-border-t ui-row-flex ui-whitespace border-bottom" >
+
+                        <label class="ui-checkbox-s verti-align">
+                            <input type="checkbox">
+                        </label>
+
+                        <div class="ui-list-img" data-href="mycourse/coursedetail.html">
+                            <span style="background-image:url(img/peixun/peixunlist.png)"></span>
+                        </div>
+                        <div class="ui-list-info" data-href="mycourse/coursedetail.html">
+                            <h4 class="ui-nowrap" >客户经理班,从0开始迅速培养能力能力</h4>
+                            <div class="ui-row-flex color-font margin-top-20 ">
+                                <div class="ui-col ui-nowrap">
+                                    <i class="iconfont icon-liulan yellow size-19 no-align"></i>1000
+                                </div>
+                                <div class="ui-col ui-nowrap">
+                                    <i class="iconfont icon-dianzan yellow size-21"></i>10
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </li>
+
+            <!--培训班-->
+            <li class="">
+                <ul class="ui-list ui-border-tb  ui-list-margin" id="shoucang-peixun">
+                    <li class="ui-border-t ui-row-flex ui-whitespace border-bottom" >
+
+                        <label class="ui-checkbox-s verti-align">
+                            <input type="checkbox">
+                        </label>
+
+                        <div class="ui-list-img" data-href="peixun/peixundetail.html">
+                            <span style="background-image:url(img/peixun/peixunlist.png)"></span>
+                        </div>
+                        <div class="ui-list-info" data-href="peixun/peixundetail.html">
+                            <h4 class="ui-nowrap">从0开始，快速了解一个技术</h4>
+                            <div class="ui-row-flex color-font margin-top-20 ">
+                                <div class="ui-col ui-nowrap">
+                                    <i class="iconfont icon-liulan yellow size-19 no-align"></i>1000
+                                </div>
+                                <div class="ui-col ui-nowrap">
+                                    <i class="iconfont icon-dianzan yellow size-21"></i>10
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="ui-border-t ui-row-flex ui-whitespace border-bottom" >
+
+                        <label class="ui-checkbox-s verti-align">
+                            <input type="checkbox">
+                        </label>
+
+                        <div class="ui-list-img" data-href="peixun/peixundetail.html">
+                            <span style="background-image:url(img/peixun/peixunlist.png)"></span>
+                        </div>
+                        <div class="ui-list-info" data-href="peixun/peixundetail.html">
+                            <h4 class="ui-nowrap">从0开始，快速了解一个技术</h4>
+                            <div class="ui-row-flex color-font margin-top-20 ">
+                                <div class="ui-col ui-nowrap">
+                                    <i class="iconfont icon-liulan yellow size-19 no-align"></i>1000
+                                </div>
+                                <div class="ui-col ui-nowrap">
+                                    <i class="iconfont icon-dianzan yellow size-21"></i>10
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</section>
+
+<script type="text/javascript" src="js/deleteForShou.js"></script>
+<script type="text/javascript">
+    $('.ui-list li div,.ui-tiled li').click(function () {
+        if ($(this).data('href')) {
+            location.href = $(this).data('href');
+        }
+    });
+    /*tab切换*/
+    window.addEventListener('load', function() {
+        var tab = new fz.Scroll('.ui-tab', {
+            role: 'tab'
+            //autoplay: true,
+            //interval: 3000
+        });
+        /* 滑动开始前 */
+        tab.on('beforeScrollStart', function(fromIndex, toIndex) {
+            console.log(fromIndex, toIndex); // from 为当前页，to 为下一页
+        })
+    });
+
+    $('.dianzan').tap(function() {
+        $(this).addClass('icon-dianzan1');
+    })
+
+</script>
+</body>
+</html>

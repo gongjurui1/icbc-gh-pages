@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="format-detection" content="telephone=no">
+    <title>评估详情</title>
+    <link rel="stylesheet" href="../css/frozen.css">
+    <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="../css/header.css">
+    <script src="../lib/zepto.min.js"></script>
+    <script src="../js/frozen.js"></script>
+    <script>
+        $(function () {
+            //页面跳转
+            $('.ui-btn-wrap button').click(function () {
+                if ($(this).data('href')) {
+                    location.href = $(this).data('href');
+                }
+            });
+            //弹窗
+            $(".start-btn").tap(function () {
+                var dia = $.dialog({
+                    title: '',
+                    content: '评估结果提交成功！',
+                    button: ["确定", "取消"]
+                });
+
+                dia.on("dialog:action", function (e) {
+                    if (e.index == 0) {
+                        console.log('点了确定按钮');
+                        setTimeout(function () {
+                            history.back();
+                        }, 1000)
+
+                        if ($('.test-li').data('href')) {
+                            location.href = $('.test-li').data('href');
+                        }
+                    } else if (e.index == 1) {
+                        console.log('点了取消按钮');
+                    }
+                });
+
+                //关闭弹窗后生效
+                dia.on("dialog:hide", function (e) {
+                    console.log("dialog hide")
+                });
+            });
+        });
+    </script>
+</head>
+
+<body>
+<header class="ui-header ui-header-positive ui-border-b ui-header-padding">
+    <i class="ui-icon-return" onclick="history.back()"></i>
+
+    <h1>评估详情页</h1>
+</header>
+<!-- class="pinggu"作为此页面标记 -->
+<section class="ui-container test-tips pinggu" id="container">
+    <div class="danxuan">
+        <div class="type red">总部-评估</div>
+        <div class="top-info ui-row ">
+            <span class="description">说明</span>
+            <!-- <span class="ui-col ui-col-50 text-align-right">回答人数</span> -->
+        </div>
+        <p class="question-title">1、从下面选择一项正确的？</p>
+        <ul class="questiones">
+            <li class="ui-row active">
+                <div class="ui-radio">
+                    <input type="radio" name="001">
+                </div>
+                <span class="item ui-col ui-col-50">第一个选项</span>
+            </li>
+            <li class="ui-row">
+                <div class="ui-radio">
+                    <input type="radio" name="001">
+                </div>
+                <span class="item ui-col ui-col-50">第一个选项</span>
+            </li>
+            <li class="ui-row">
+                <div class="ui-radio">
+                    <input type="radio" name="001">
+                </div>
+                <span class="item ui-col ui-col-50">第一个选项</span>
+            </li>
+        </ul>
+
+        <p class="question-title">2、从下面选择正确的选择（可多选）？</p>
+        <ul class="questiones">
+            <li class="ui-row active">
+                <div class="ui-checkbox">
+                    <input type="checkbox" name="002" class="iconfont icon-duoxuan">
+                </div>
+                <span class="item line-height35">第一个选项</span>
+            </li>
+            <li class="ui-row">
+                <div class="ui-checkbox">
+                    <input type="checkbox" name="002" class="iconfont icon-duoxuan" >
+                </div>
+                <span class="item line-height35">第2个选项</span>
+            </li>
+
+        </ul>
+    </div>
+    <!-- <div class="ui-btn-wrap renshu">
+        被调查总人数：5人
+    </div> -->
+    <div class="ui-btn-wrap">
+        <button class="ui-btn-lg ui-btn-danger start-btn">
+            提交
+        </button>
+    </div>
+    <div class="ui-btn-wrap">
+        <button class="ui-btn-lg ui-btn-danger cancle-btn">
+            取消
+        </button>
+    </div>
+    <script type="text/javascript">
+        $('.cancle-btn').tap(function () {
+            history.back();
+        });
+    </script>
+</section>
+</body>
+
+</html>

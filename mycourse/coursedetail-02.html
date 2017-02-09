@@ -1,0 +1,282 @@
+
+<!-- 只有我的课程详情页有学习进度和时长,最新课程、推荐课程和选课详情页没有。 -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="format-detection" content="telephone=no">
+    <title>我的课程详情</title>
+    <link rel="stylesheet" href="../css/frozen.css">
+    <link rel="stylesheet" href="../css/header.css">
+    <link rel="stylesheet" href="../css/index.css" />
+    <link rel="stylesheet" href="../font/iconfont.css">
+    <script src="../lib/zepto.min.js"></script>
+    <script src="../js/frozen.js"></script>
+    <script src="../js/jwplayer.js"></script>
+    <script src="../js/jwplayer.html5.js"></script>
+    <script type="text/javascript">
+    $(function() {
+        //tab
+        (function() {
+            var tab = new fz.Scroll('.ui-tab', {
+                role: 'tab'
+                    //autoplay: true,
+                    //interval: 3000
+            });
+            /* 滑动开始前 */
+            tab.on('beforeScrollStart', function(fromIndex, toIndex) {
+                console.log(fromIndex, toIndex); // from 为当前页，to 为下一页
+            })
+        })();
+        //页面跳转
+        $('#course-wrapper li div,.goin').tap(function() {
+            if ($(this).data('href')) {
+                location.href = $(this).data('href');
+            }
+        });
+
+        //视频播放相关
+        var thePlayer = jwplayer('container').setup({
+            autostart: true,
+            flashplayer: '../js/jwplayer.flash.swf',
+            //file: '../videos/222.mp4',
+			playlist : [
+
+                 { duration : 32 , file : "../videos/222.mp4" , image : "/uploads/video.jpg" },
+
+                 { duration : 124 , file : "../videos/333.mp4" , image : "/uploads/bbb.jpg" }
+
+        ],
+            width: "100%",
+            height: 200,
+            // skin: './learner/js/common/jwplayer/skins/stormtrooper.xml',
+            dock: false
+        });
+
+        function playSrc(src) {
+            jwplayer('container').setup({
+                file: src,
+                width: "100%",
+                height: 200,
+                autostart: true //谷歌下貌似不生效，但视频确实切换了
+            });
+        }
+
+        $('#video01').click(function() {
+            //playSrc('../videos/222.mp4');
+        });
+
+        $('#video02').click(function() {
+           // playSrc('../videos/333.mp4');
+		   jwplayer('container').playlistItem(1).seek(20);
+        });
+
+        //以下API按需引用，手机下用tap代替click事件。
+        //播放 暂停  
+        $('.player-play').click(function() {
+            if (thePlayer.getState() != 'PLAYING') {
+                thePlayer.play(true);
+                this.value = '暂停';
+            } else {
+                thePlayer.play(false);
+                this.value = '播放';
+            }
+        });
+
+        //停止  
+        $('.player-stop').click(function() {
+            thePlayer.stop();
+        });
+
+        //获取状态  
+        $('.player-status').click(function() {
+            var state = thePlayer.getState();
+            var msg;
+            switch (state) {
+                case 'BUFFERING':
+                    msg = '加载中';
+                    break;
+                case 'PLAYING':
+                    msg = '正在播放';
+                    break;
+                case 'PAUSED':
+                    msg = '暂停';
+                    break;
+                case 'IDLE':
+                    msg = '停止';
+                    break;
+            }
+            alert(msg);
+        });
+
+        //获取播放进度  
+        $('.player-current').click(function() {
+            alert(thePlayer.getPosition());
+        });
+
+        //跳转到指定位置播放  
+        $('.player-goto').click(function() {
+            if (thePlayer.getState() != 'PLAYING') { //若当前未播放，先启动播放器  
+                thePlayer.play();
+            }
+            thePlayer.seek(30); //从指定位置开始播放(单位：秒)  
+        });
+
+        //获取视频长度  
+        $('.player-length').click(function() {
+            alert(thePlayer.getDuration());
+        });
+
+
+
+        $('.icon-dianzan').click(function(){
+            $(this).addClass('icon-dianzan1 size-16');
+        })
+        $('.icon-shoucang').click(function(){
+            $(this).addClass('icon-shoucang1 size-18');
+        })
+        
+    });
+    </script>
+</head>
+
+<body ontouchstart>
+    <header class="ui-header ui-header-positive ui-border-b ui-header-padding">
+        <i class="ui-icon-return" onclick="history.back()"></i>
+        <h1 class="ui-nowrap">客户经理培训课程</h1>
+    </header>
+    <section class="ui-container course-details">
+        <div id="container"></div>
+        <div class="info">
+            <div class="collect"><span class="iconfont icon-shoucang size-21 red no-align margin-0"></span>1000</div>
+            <div class="like"><span class="iconfont icon-dianzan size-21 red no-align margin-0"></span>23344</div>
+        </div>
+        <section id="tab">
+            <div class="demo-item">
+                <div class="demo-block">
+                    <div class="ui-tab">
+                        <ul class="ui-tab-nav ui-border-b">
+                            <li class="current">简介</li>
+                            <li>学习</li>
+                            <li>测试</li>
+                        </ul>
+                        <ul class="ui-tab-content">
+                            <li class="jianjie">
+                                <div class="desc">
+                                    <h3>客户经理培训课程</h3>
+                                    <div class="test-con">
+                                        <div class="left">
+                                            <p class="start-time">课程分类：职业素养</p>
+                                            <!-- <p class="progess">学习进度： </p>
+                                            <div class="jindu">
+                                                <div class="ui-progress">
+                                                    <span style="width:50%"></span>
+                                                </div>
+                                                <span class="percent">70%</span>
+                                            </div> -->
+                                        </div>
+                                        <div class="right">
+                                            <p class="end-time">时长：70(分钟)</p>
+                                            <!-- <p class="state">状态：未完成</p> -->
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="content">
+                                    <h3>课程简介</h3>
+                                    <div class="detail">
+                                        <p>文字内容阿斯蒂芬快乐就ask浪费精力阿双方交流空间ask附近阿萨德快乐。</p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="xuexi">
+                                <div class="demo-item">
+                                    <div class="demo-block">
+                                        <h3 class="ui-nowrap">李安说法--会议纪要学习技巧学习技巧学习技巧. . .</h3>
+                                        <ul class="ui-list ui-list-link ui-border-tb wf-xuexi">
+                                            <li class="ui-border-t">
+                                                <div class="circle"></div>
+                                                <div class="ui-list-info" id="video01">
+                                                    <h4 class="ui-nowrap">测试视频01</h4>
+                                                </div>
+                                            </li>
+                                            <li class="ui-border-t">
+                                                <div class="circle"></div>
+                                                <div class="ui-list-info" id="video02">
+                                                    <h4 class="ui-nowrap">测试视频02</h4>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="demo-block">
+                                        <h3 class="ui-nowrap">李安说法--会议纪要学习技巧学习技巧学习技巧. . .</h3>
+                                        <ul class="ui-list ui-list-link ui-border-tb wf-xuexi">
+                                            <li class="ui-border-t">
+                                                <div class="circle"></div>
+                                                <div class="ui-list-info" id="video03">
+                                                    <h4 class="ui-nowrap">测试视频03</h4>
+                                                </div>
+                                            </li>
+                                            <li class="ui-border-t active">
+                                                <div class="circle"></div>
+                                                <div class="ui-list-info" id="video04">
+                                                    <h4 class="ui-nowrap">测试视频04</h4>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="ceshi">
+                                <div class="demo-item">
+                                    <div class="demo-block">
+                                        <ul class="ui-list ui-list-link ui-border-tb baoming">
+                                            <li class="ui-border-t ui-list-info test-li">
+                                                <h2 class="ui-nowrap">高级客户经理专项考试</h2>
+                                                <div class="ui-nowrap ui-row-flex color-font">
+                                                    <div class="ui-col">开始：2016-07-22</div>
+                                                    <div class="ui-col">结束：2016-02-30</div>
+                                                </div>
+                                                <div class="ui-nowrap ui-row-flex color-font">
+                                                    <div class="ui-col">成绩：60分</div>
+                                                    <div class="ui-col">状态：及格</div>
+                                                </div>
+                                                <div class="ui-nowrap ui-row-flex color-font">
+                                                    <div class="ui-col">次数：2次</div>
+                                                </div>
+                                                <div class="goin-wrapper">
+                                                    <i class="goin forbidden"  data-href="../test/testintro.html">进入</i>
+                                                </div>
+                                            </li>
+                                            <li class="ui-border-t ui-list-info test-li">
+                                                <h2 class="ui-nowrap">高级客户经理专项考试</h2>
+                                                <div class="ui-nowrap ui-row-flex color-font">
+                                                    <div class="ui-col">开始：2016-07-22</div>
+                                                    <div class="ui-col">结束：2016-02-30</div>
+                                                </div>
+                                                <div class="ui-nowrap ui-row-flex color-font">
+                                                    <div class="ui-col">成绩：60分</div>
+                                                    <div class="ui-col">状态：及格</div>
+                                                </div>
+                                                <div class="ui-nowrap ui-row-flex color-font">
+                                                    <div class="ui-col">次数：2次</div>
+                                                </div>
+                                                <div class="goin-wrapper">
+                                                    <i class="goin"  data-href="../test/testintro.html">进入</i>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </section>
+</body>
+
+</html>

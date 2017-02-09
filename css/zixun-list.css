@@ -1,0 +1,97 @@
+/*资讯列表*/
+.zixun-list .ui-list-content li p{
+    color: #000;
+}
+.ui-border-bottom{
+
+}
+.ui-weilei li .ui-list-info{
+    border-top: 1px solid #e5e5e5;
+}
+.small-tou{
+    width: 26px;
+    height: 26px;
+    -webkit-border-radius: 13px;
+    -moz-border-radius: 13px;
+    border-radius: 13px;
+}
+.ui-weilei li:nth-child(1) .small-tou span{
+    width: 100%;
+    height: 100%;
+    background: url(../img/laba.png) no-repeat;
+    -webkit-background-size: contain;
+    background-size: contain;
+}
+.ui-weilei li:nth-child(2) .small-tou span,.ui-weilei li:nth-child(4) .small-tou span{
+    width: 100%;
+    height: 100%;
+    background: url(../img/tongzhi.png) no-repeat;
+    -webkit-background-size: contain;
+    background-size: contain;
+}
+.ui-weilei li:nth-child(3) .small-tou span{
+    width: 100%;
+    height: 100%;
+    background: url(../img/huodong.png) no-repeat;
+    -webkit-background-size: contain;
+    background-size: contain;
+}
+.zixun-list .ui-list-info{
+    padding-top: 0;
+    padding-bottom: 0;
+}
+.zixun-list .ui-txt-info{
+    font-size: 14px;
+}
+
+/*/!*beijing css spirt*!/
+.ui-weilei li:nth-child(1) div.ui-avatar-s span,.ui-weilei li:nth-child(2) div.ui-avatar-s span,.ui-weilei li:nth-child(3) div.ui-avatar-s span,.ui-weilei li:nth-child(4) div.ui-avatar-s span{
+    width: 100%;
+    height: 100%;
+    background: url(../img/42-42.png) 0 0 no-repeat;
+    -webkit-background-size: contain;
+    background-size: contain;
+}
+
+.ui-weilei li:nth-child(2) div.ui-avatar-s span{
+    background-position: 0 -42px;
+}
+.ui-weilei li:nth-child(3) div.ui-avatar-s span{
+    background-position: 0 -84px;
+}
+.ui-weilei li:nth-child(4) div.ui-avatar-s span{
+    background-position: 0 -42px;
+}*/
+.ui-btn{
+    border: none;
+}
+
+/*资讯详情*/
+.ui-list-content li{
+    color: #565656;
+}
+
+/*右箭头*/
+.zixun-list .ui-list-info:after{
+    display: block;
+    content: '';
+    width: 6px;
+    height: 6px;
+    border: 2px solid #c7c7c7;
+    margin-top: 0;
+    margin-right: -15px;
+    border-left-color: transparent;
+    border-bottom-color: transparent;
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+.xiazai{
+    position: absolute;
+    right: 20px;
+    bottom: 10px;
+    font-size: 14px;
+}

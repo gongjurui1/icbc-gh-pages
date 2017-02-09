@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="format-detection" content="telephone=no">
+    <title>测试说明</title>
+    <link rel="stylesheet" href="../css/frozen.css">
+    <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="../css/header.css">
+    <script src="../lib/zepto.min.js"></script>
+    <script src="../js/frozen.js"></script>
+    <script>
+    $(function() {
+        //页面跳转
+        $('.ui-btn-wrap button').click(function() {
+            if ($(this).data('href')) {
+                location.href = $(this).data('href');
+            }
+        });
+    })
+    </script>
+</head>
+
+<body>
+    <header class="ui-header ui-header-positive ui-border-b ui-header-padding">
+        <i class="ui-icon-return" onclick="history.back()"></i>
+        <h1>测试说明 </h1>
+    </header>
+    <!-- class="test-tips"作为此页面标记 -->
+    <section class="ui-container test-tips">
+        <div class="demo-block">
+            <ul class="ui-list ui-list-pure ui-border-tb">
+                <li class="ui-border-t">
+                    <h4>说明：本次考试是高级客户经理培训班的考试</h4>
+                </li>
+                <li class="ui-border-t">
+                    <h4>开始：2016-07-12  21:00</h4>
+                </li>
+                <li class="ui-border-t">
+                    <h4>结束：2017-07-04  18:00</h4>
+                </li>
+                <li class="ui-border-t">
+                    <h4>时长：60（分钟）</h4>
+                </li>
+                <li class="ui-border-t">
+                    <h4>允许次数：该考试不限制考试次数</h4>
+                </li>
+                <li class="ui-border-t">
+                    <h4>试卷总分：261.4分</h4>
+                </li>
+                <li class="ui-border-t">
+                    <h4>及格分数：22.0分</h4>
+                </li>
+            </ul>
+        </div>
+        <div class="ui-btn-wrap">
+            <button class="ui-btn-lg ui-btn-danger start-btn" data-href="testdetail.html">
+                开始
+            </button>
+        </div>
+        <div class="ui-btn-wrap">
+            <button class="ui-btn-lg ui-btn-danger cancle-btn">
+                退出
+            </button>
+        </div>
+        <script type="text/javascript">
+            $('.cancle-btn').tap(function(){
+                history.back()
+            });
+        </script>
+    </section>
+</body>
+
+</html>

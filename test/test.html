@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- 要判断滑动的方向是上还是下，然后显示上面或下面的箭头 -->
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="format-detection" content="telephone=no">
+    <title>测试</title>
+    <link rel="stylesheet" href="../css/frozen.css">
+    <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="../font/iconfont.css"/>
+    <link rel="stylesheet" href="../css/header.css">
+    <script src="../lib/zepto.min.js"></script>
+    <script src="../js/frozen.js"></script>
+    <script src="../lib/load-bottom/dropload.min.js"></script>
+    <script src="../js/load-bottom.js"></script>
+</head>
+
+<body>
+    <header class="ui-header ui-header-positive ui-border-b ui-header-padding">
+        <i class="iconfont ui-icon-return size-21" onclick="history.back()"></i>
+        <h1>测试 </h1>
+        <i class="iconfont ui-icon-search ui-icon-position size-26" data-href="../history.html"></i>
+    </header>
+    <!-- class="test-list"作为此页面标记 -->
+    <section class="ui-container test-list">
+        <section id="tab">
+            <div class="demo-item">
+                <div class="demo-block">
+                    <div class="ui-tab">
+                        <ul class="ui-tab-nav ui-border-b">
+                            <li>未通过</li>
+                            <li>已通过</li>
+                        </ul>
+                        <ul class="ui-tab-content">
+                            <li>
+                                <div class="demo-item">
+                                    <div class="demo-block content">
+                                        <ul class="ui-list ui-border-tb lists" id="thelist01">
+                                            <li class="ui-border-t ui-list-info test-li" data-href="testintro.html">
+                                                <h2 class="ui-nowrap">高级客户经理专项考试</h2>
+                                                <div class="ui-nowrap ui-row-flex color-font">
+                                                    <div class="ui-col blue">开始：2016-07-22</div>
+                                                    <div class="ui-col blue">结束：2016-02-30</div>
+                                                </div>
+                                                <div class="ui-nowrap ui-row-flex color-font">
+                                                    <div class="ui-col red1">成绩：60分</div>
+                                                    <div class="ui-col">计分方式：第一次通过</div>
+                                                </div>
+                                                <div class="ui-nowrap ui-row-flex color-font">
+                                                    <div class="ui-col">允许次数：无限制</div>
+                                                    <div class="ui-col">已考次数：1次</div>
+                                                </div>
+                                                <div class="goin-wrapper">
+                                                    <i class="signin goin jinru" data-href="testintro.html">进入</i>
+                                                </div>
+                                            </li>
+                                            <li class="ui-border-t ui-list-info">
+                                                <h2 class="ui-nowrap">高级客户经理专项考试</h2>
+                                                <div class="ui-nowrap ui-row-flex color-font">
+                                                    <div class="ui-col">开始：2016-07-22</div>
+                                                    <div class="ui-col">结束：2016-02-30</div>
+                                                </div>
+                                                <div class="ui-nowrap ui-row-flex color-font">
+                                                    <div class="ui-col">成绩：40分</div>
+                                                    <div class="ui-col">状态：不及格</div>
+                                                </div>
+                                                <div class="goin-wrapper">
+                                                    <i class="signin goin baoming">报名</i>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="demo-item">
+                                    <div class="demo-block content02">
+                                        <ul class="ui-list ui-border-tb baoming" id="thelist02">
+                                            <li class="ui-border-t ui-list-info test-li" data-href="testintro.html">
+                                                <h2 class="ui-nowrap">高级客户经理专项考试</h2>
+                                                <div class="ui-nowrap ui-row-flex color-font">
+                                                    <div class="ui-col blue">开始：2016-07-22</div>
+                                                    <div class="ui-col blue">结束：2016-02-30</div>
+                                                </div>
+                                                <div class="ui-nowrap ui-row-flex color-font">
+                                                    <div class="ui-col red1">成绩：60分</div>
+                                                    <div class="ui-col">计分方式：第一次通过</div>
+                                                </div>
+                                                <div class="ui-nowrap ui-row-flex color-font">
+                                                    <div class="ui-col">允许次数：无限制</div>
+                                                    <div class="ui-col">已考次数：1次</div>
+                                                </div>
+                                                <div class="goin-wrapper">
+                                                    <i class="signin goin jinru" data-href="testintro.html">进入</i>
+                                                </div>
+                                            </li>
+                                            <li class="ui-border-t ui-list-info">
+                                                <h2 class="ui-nowrap">高级客户经理专项考试</h2>
+                                                <div class="ui-nowrap ui-row-flex color-font">
+                                                    <div class="ui-col">开始：2016-07-22</div>
+                                                    <div class="ui-col">结束：2016-02-30</div>
+                                                </div>
+                                                <div class="ui-nowrap ui-row-flex color-font">
+                                                    <div class="ui-col">成绩：40分</div>
+                                                    <div class="ui-col">状态：不及格</div>
+                                                </div>
+                                                <div class="goin-wrapper">
+                                                    <i class="signin goin jinru" data-href="testintro.html">进入</i>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </section>
+    <script>
+    $(function() {
+        //页面跳转
+        $('.ui-header i,.signin.goin.jinru').click(function() {
+            if ($(this).data('href')) {
+                location.href = $(this).data('href');
+            }
+        });
+
+        //tab 切换
+        var tab = new fz.Scroll('.ui-tab', {
+            role: 'tab',
+            disableTouch: true,
+            defaultIndex:0
+                //autoplay: true,
+                //interval: 3000
+        });
+        /* 滑动开始前 */
+        tab.on('beforeScrollStart', function(fromIndex, toIndex) {
+            console.log(fromIndex, toIndex); // from 为当前页，to 为下一页
+        })
+    });
+
+
+    //弹窗
+    $(".signin.goin.baoming").tap(function() {
+        var dia = $.dialog({
+            title: '',
+            content: '报名成功，是否进入测试?',
+            button: ["进入", "取消"]
+        });
+
+        dia.on("dialog:action", function(e) {
+            if (e.index == 0) {
+                console.log('点了进入按钮');
+                if ($('.test-li').data('href')) {
+                    location.href = $('.test-li').data('href');
+                }
+            } else if (e.index == 1) {
+                console.log('点了取消按钮');
+            }
+        });
+
+        //关闭弹窗后生效
+        dia.on("dialog:hide", function(e) {
+            console.log("dialog hide")
+        });
+    });
+    </script>
+</body>
+
+</html>

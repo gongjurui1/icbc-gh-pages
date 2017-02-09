@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="format-detection" content="telephone=no">
+    <title>我的信息</title>
+    <link rel="stylesheet" href="css/frozen.css">
+    <link rel="stylesheet" href="css/header.css" />
+    <link rel="stylesheet" href="css/index.css">
+    <script src="lib/zepto.min.js"></script>
+    <script src="js/frozen.js"></script>
+</head>
+
+<body>
+    <header class="ui-header ui-header-positive ui-border-b ui-header-padding">
+        <i class="ui-icon-return" onclick="history.back()"></i>
+    </header>
+    <!-- class="peixun"作为此页面标记 -->
+    <section class="ui-container info">
+        <section class="avatar ui-notice">
+            <span></span>
+            <p>李延桀</p>
+            <p>工号：test-lyl</p>
+        </section>
+        <!-- flex网格 -->
+        <div class="demo-block wf-flex">
+            <ul class="wf-ul">
+                <li class="wf-33" data-href="peixun/mypeixun.html">
+                    <div class="one-pic"><span></span></div>
+                    <p class="ui-mes-imgbottom"><a href="#">我的培训班</a></p>
+                </li>
+                <li class="wf-33" data-href="mycourse/mycourse.html">
+                    <div class="one-pic"><span></span></div>
+                    <p class="ui-mes-imgbottom"><a href="#">我的课程</a></p>
+                </li>
+                <li class="wf-33" data-href="learnlatest.html">
+                    <div class="one-pic"><span></span></div>
+                    <p class="ui-mes-imgbottom"><a href="#">最近学习</a></p>
+                </li>
+                <li class="wf-33" data-href="myshoucang.html">
+                    <div class="one-pic"><span></span></div>
+                    <p class="ui-mes-imgbottom"><a href="#">我的收藏</a></p>
+                </li>
+                <li class="wf-33" data-href="learndangan/learndangan.html">
+                    <div class="one-pic"><span></span></div>
+                    <p class="ui-mes-imgbottom"><a href="#">学习档案</a></p>
+                </li>
+                <li class="wf-33" data-href="myscore.html">
+                    <div class="one-pic"><span></span></div>
+                    <p class="ui-mes-imgbottom"><a href="#">我的学分</a></p>
+                </li>
+            </ul>
+        </div>
+    </section>
+    <script>
+    //每隔三个去掉边框，加no-border样式
+    $('.wf-ul li').each(function() {
+        var index = $(this).index() + 1;
+        if (index % 2 == 1) {
+            $(this).addClass('no-border');
+        };
+    });
+    //页面跳转
+    $('.wf-ul li').tap(function() {
+        if ($(this).data('href')) {
+            location.href = $(this).data('href');
+        }
+    });
+    </script>
+</body>
+
+</html>

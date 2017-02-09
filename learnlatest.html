@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="format-detection" content="telephone=no">
+    <title>最近学习</title>
+
+    <link rel="stylesheet" href="css/frozen.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/index.css">
+
+    <script src="lib/zepto.min.js"></script>
+    <script src="js/frozen.js"></script>
+
+
+</head>
+
+<body ontouchstart>
+<header class="ui-header ui-header-positive ui-border-b ui-header-padding">
+    <i class="ui-icon-return" onclick="history.back()"></i>
+
+    <h1>最近学习</h1>
+</header>
+
+<section class="ui-container learn-latest">
+   <div class="learn">
+       <ul class="learn-ul">
+           <!--第一个-->
+           <li class="">
+               <i class="red-circle"></i>
+               <p class="date">2016-07-24</p>
+               <div class="ui-list-info">
+                   <h4>领导说了什么-第二届互联网大会</h4>
+                  <!-- <p class="ui-nowrap">1-习近平在乌镇都说了什么</p>-->
+               </div>
+               <div class="ui-list-info">
+                   <h4>移动互联网发展与微博创新</h4>
+                   <!--<p class="ui-nowrap">1-移动互联网发展</p>
+                   <p class="ui-nowrap">2-微博创新</p>-->
+               </div>
+           </li>
+           <!--第二个-->
+           <li class="">
+               <i class="red-circle"></i>
+               <p class="date">2016-07-23</p>
+               <div class="ui-list-info">
+                   <h4>产品创新与体验设计</h4>
+                   <!--<p class="ui-nowrap">1-产品创新与体验设计</p>-->
+               </div>
+           </li>
+           <!--第三个-->
+           <li class="">
+               <i class="red-circle"></i>
+               <p class="date">2016-07-22</p>
+               <div class="ui-list-info">
+                   <h4>基于终端能力的产品创新</h4>
+                   <!--<p class="ui-nowrap">基于终端能力的产品创新PPT</p>-->
+               </div>
+           </li>
+           <!--第四个-->
+           <li class="">
+               <i class="red-circle"></i>
+               <p class="date">2016-07-21</p>
+               <div class="ui-list-info">
+                   <h4>多变环境下的管理创新</h4>
+               </div>
+               <div class="ui-list-info">
+                   <h4>工行总部高级客户经理专项培训课程与客户体验课程培训</h4>
+               </div>
+           </li>
+       </ul>
+   </div>
+</section>
+
+
+<script type="text/javascript">
+    $('.ui-list li,.ui-tiled li ').click(function () {
+        if ($(this).data('href')) {
+            location.href = $(this).data('href');
+        }
+    });
+
+
+</script>
+</body>
+</html>

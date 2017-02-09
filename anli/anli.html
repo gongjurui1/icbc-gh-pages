@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="format-detection" content="telephone=no">
+    <title>案例列表</title>
+    <link rel="stylesheet" href="../css/frozen.css">
+    <link rel="stylesheet" href="../js/swiper.min.css" />
+    <link rel="stylesheet" href="../css/header.css">
+    <link rel="stylesheet" href="../css/index.css" />
+    <link rel="stylesheet" href="../font/iconfont.css" />
+    <script src="../lib/zepto.min.js"></script>
+    <script src="../js/frozen.js"></script>
+    <script src="../js/swiper.jquery.min.js"></script>
+    <script src="../js/component/utils.js"></script>
+</head>
+
+<body ontouchstart>
+    <header class="ui-header ui-header-positive ui-border-b ui-header-padding">
+        <i class="iconfont ui-icon-return size-21" onclick="history.back()"></i>
+        <h1>案例</h1>
+        <i class="iconfont ui-icon-search ui-icon-position size-26" data-href="../history.html"></i>
+    </header>
+
+    <section class="anli-list ui-container ui-container-change" id="anli-list">
+        <div class="banner"></div>
+        <ul class="list">
+            <li class="ui-arrowlink" data-href="anlidetail.html">
+                <span class="ui-nowrap-70">客服人员培训案例客服人员培训案例</span>
+                <span class="ui-panel-title-tips">2016-07-31</span>
+            </li>
+            <li class="ui-arrowlink" data-href="anlidetail.html">
+                <span>客服人员培训案例</span>
+                <span class="ui-panel-title-tips">2016-07-31</span>
+            </li>
+        </ul>
+        <div class="demo-block" id="anli-loading" style="display:none">
+            <div class="ui-loading-wrap">
+                <p>正在加载中...</p>
+                <i class="ui-loading"></i>
+            </div>
+        </div>
+    </section>
+    <script>
+        //页面跳转
+        $('ul li,.ui-header i').tap(function() {
+            if ($(this).data('href')) {
+                location.href = $(this).data('href');
+            }
+        });
+
+
+        //设置广告图高度
+        $('.anli-list .banner').setHeight(640,220);
+
+        //上滑刷新数据
+        //k_touch("anli-list", "y");
+    </script>
+
+    
+</body>
+</html>

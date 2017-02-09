@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="format-detection" content="telephone=no">
+    <title>教材详情</title>
+    <link rel="stylesheet" href="../css/frozen.css">
+    <link rel="stylesheet" href="../js/swiper.min.css" />
+    <link rel="stylesheet" href="../css/header.css">
+    <link rel="stylesheet" href="../css/index.css" />
+    <script src="../lib/zepto.min.js"></script>
+    <script src="../js/frozen.js"></script>
+    <script src="../js/swiper.jquery.min.js"></script>
+    <script src="../js/component/utils.js"></script>
+</head>
+
+<body ontouchstart>
+    <header class="ui-header ui-header-positive ui-border-b ui-header-padding">
+        <i class="ui-icon-return" onclick="history.back()"></i>
+        <h1>教材详情</h1>
+    </header>
+
+    <section class="ui-container">
+        <ul class="ui-list ui-list-pure ui-border-tb">
+            <li class="ui-border-t">
+                <h4>高级客服经理专项学习教材高级客服经理专项学习教材高级客服经理专项学习教材</h4>
+                <h5><span class="date">2016年2月12日  15:13</span></h5>
+            </li>
+        </ul>
+        <ul class="ui-list-content ui-list ui-list-pure ui-border-tb ui-margintop">
+            <li>
+                <p class="color-000">本教材主要针对于客服经理难耐？、别犹豫了，暑期就剩一半啦。海岛、水上乐园、避暑山庄都可以行动起来。</p>
+
+            </li>
+        </ul>
+    </section>
+
+    <script>
+        //页面跳转
+        $('ul li').tap(function() {
+            if ($(this).data('href')) {
+                location.href = $(this).data('href');
+            }
+        });
+
+        //设置广告图高度
+        $('.anli-list .banner').setHeight(640,220);
+
+    </script>
+</body>
+
+</html>

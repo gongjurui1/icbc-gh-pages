@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="format-detection" content="telephone=no">
+    <title>我的课程</title>
+
+    <link rel="stylesheet" href="../css/frozen.css">
+    <link rel="stylesheet" href="../font/iconfont.css"/>
+    <link rel="stylesheet" href="../css/header.css">
+    <link rel="stylesheet" href="../css/index.css"/>
+    <script src="../lib/zepto.min.js"></script>
+    <script src="../js/frozen.js"></script>
+	<script src="http://www.86y.org/js/jquery.min.js"></script> 
+
+
+</head>
+
+<body ontouchstart>
+<header class="ui-header ui-header-positive ui-border-b ui-header-padding">
+    <i class="iconfont ui-icon-return size-21" onclick="history.back()"></i>
+
+    <h1>我的课程</h1>
+    <i class="iconfont ui-icon-delete ui-icon-position size-26" data-href="../history.html"></i>
+</header>
+<footer class="ui-footer ui-footer-btn">
+
+    <ul class="ui-tiled ui-border-t">
+        <li class="ui-border-r">
+            <div class="total-all">全选</div>
+        </li>
+        <li class="ui-border-r">
+            <div class="total-delete">删除</div>
+        </li>
+    </ul>
+
+</footer>
+<section class="ui-container my-course">
+    <div class="ui-searchbar-wrap ui-border-b">
+        <div class="ui-searchbar ui-border-radius">
+            <i class="iconfont ui-icon-search size-18"></i>
+
+            <div class="ui-searchbar-text">搜索</div>
+            <div class="ui-searchbar-input"><input value="" type="text" placeholder="搜索" autocapitalize="off">
+            </div>
+            <i class="iconfont ui-icon-close size-19"></i>
+        </div>
+        <button class="ui-searchbar-cancel">搜索</button>
+    </div>
+    <!--list start-->
+    <ul class="ui-list ui-border-tb  ui-list-margin" id="course-wrapper">
+        <label for="course1">
+        <li class="ui-border-t ui-row-flex ui-whitespace border-bottom" >
+
+            <label class="ui-checkbox-s verti-align">
+                <input type="checkbox" name="course" id="course1">
+            </label>
+
+                <div class="ui-list-img list-img-width">
+                    <span style="background-image:url(../img/peixun/peixunlist.png)"></span>
+                </div>
+                <div class="ui-list-info">
+                    <h4 class="ui-nowrap">从0开始，快速了解一个技术行业</h4>
+
+                    <div class="ui-nowrap ui-row-flex color-font">
+                        <div class="ui-col">
+                            <i class="iconfont icon-shijian yellow size-19"></i>60
+                        </div>
+                        <div class="ui-col text-align-center">自选</div>
+                        <div class="ui-col">
+                            <span class="process">学习中</span>
+                        </div>
+                    </div>
+                    <div class="ui-nowrap ui-process color-font">
+                        <div class="font-process">进度：</div>
+                        <div class="ui-progress ui-margintop">
+                            <span style="width: 30%"></span>
+                        </div>
+                        <span class="process-jindu">30%</span>
+                    </div>
+                </div>
+           </li>
+        </label>
+
+        <li class="ui-border-t ui-row-flex ui-whitespace border-bottom" data-href="coursedetail.html">
+
+            <label class="ui-checkbox-s verti-align">
+                <input type="checkbox">
+            </label>
+
+            <div class="ui-list-img list-img-width">
+                <span style="background-image:url(../img/peixun/peixunlist.png)"></span>
+            </div>
+            <div class="ui-list-info">
+                <h4 class="ui-nowrap">从0开始，快速了解一个技术行业</h4>
+
+                <div class="ui-nowrap ui-row-flex color-font">
+                    <div class="ui-col">
+                        <i class="iconfont icon-shijian yellow size-19"></i>60
+                    </div>
+                    <div class="ui-col">必修</div>
+                    <div class="ui-col">
+                        <span class="process">学习中</span>
+                    </div>
+                </div>
+                <div class="ui-nowrap ui-process color-font">
+                    <div class="font-process">进度：</div>
+                    <div class="ui-progress ui-margintop">
+                        <span style="width: 10%"></span>
+                    </div>
+                    <span class="process-jindu">10%</span>
+                </div>
+            </div>
+        </li>
+        <li class="ui-border-t ui-row-flex ui-whitespace border-bottom" data-href="coursedetail.html">
+
+            <label class="ui-checkbox-s verti-align">
+                <input type="checkbox">
+            </label>
+
+            <div class="ui-list-img list-img-width">
+                <span style="background-image:url(../img/peixun/peixunlist.png)"></span>
+            </div>
+            <div class="ui-list-info">
+                <h4 class="ui-nowrap">从0开始，快速了解一个技术行业</h4>
+
+                <div class="ui-nowrap ui-row-flex color-font">
+                    <div class="ui-col">
+                        <i class="iconfont icon-shijian yellow size-19"></i>60
+                    </div>
+                    <div class="ui-col">
+                        <span class="process">学习中</span>
+                    </div>
+
+                </div>
+                <div class="ui-nowrap ui-process color-font">
+                    <div class="font-process">进度：</div>
+                    <div class="ui-progress ui-margintop">
+                        <span style="width: 80%"></span>
+                    </div>
+                    <span class="process-jindu">80%</span>
+                </div>
+            </div>
+        </li>
+        <li class="ui-border-t ui-row-flex ui-whitespace border-bottom" data-href="coursedetail.html">
+
+            <label class="ui-checkbox-s verti-align">
+                <input type="checkbox">
+            </label>
+
+            <div class="ui-list-img list-img-width">
+                <span style="background-image:url(../img/peixun/peixunlist.png)"></span>
+            </div>
+            <div class="ui-list-info">
+                <h4 class="ui-nowrap">从0开始，快速了解一个技术行业</h4>
+
+                <div class="ui-nowrap  ui-row-flex color-font">
+                    <div class="ui-col">
+                        <i class="iconfont icon-shijian yellow size-19"></i>60
+                    </div>
+                    <div class="ui-col">
+                        <span class="process">学习中</span>
+                    </div>
+                </div>
+                <div class="ui-nowrap ui-process color-font">
+                    <div class="font-process">进度：</div>
+                    <div class="ui-progress ui-margintop">
+                        <span style="width: 30%"></span>
+                    </div>
+                    <span class="process-jindu">30%</span>
+                </div>
+            </div>
+        </li>
+        <li class="ui-border-t ui-row-flex ui-whitespace border-bottom" data-href="coursedetail.html">
+
+            <label class="ui-checkbox-s verti-align">
+                <input type="checkbox">
+            </label>
+
+            <div class="ui-list-img list-img-width">
+                <span style="background-image:url(../img/peixun/peixunlist.png)"></span>
+            </div>
+            <div class="ui-list-info">
+                <h4 class="ui-nowrap">从0开始，快速了解一个技术行业</h4>
+
+                <div class="ui-nowrap  ui-row-flex color-font">
+                    <div class="ui-col">
+                        <i class="iconfont icon-shijian yellow size-19"></i>60
+                    </div>
+                    <div class="ui-col">
+                        <span class="process">学习中</span>
+                    </div>
+                </div>
+                <div class="ui-nowrap ui-process color-font">
+                    <div class="font-process">进度：</div>
+                    <div class="ui-progress ui-margintop">
+                        <span style="width: 50%"></span>
+                    </div>
+                    <span class="process-jindu">50%</span>
+                </div>
+            </div>
+        </li>
+    </ul>
+
+</section>
+
+<script type="text/javascript" src="../js/delete.js" charset="utf-8"></script>
+<script>
+    $('.ui-list li div,.ui-tiled li').click(function () {
+        if ($(this).parent().data('href')) {
+            location.href = $(this).parent().data('href');
+        }
+    });
+
+    $('.ui-searchbar').click(function () {
+        $('.ui-searchbar-wrap').addClass('focus');
+        $('.ui-searchbar-input input').focus();
+    });
+    /*$('.ui-searchbar-cancel').tap(function () {
+        $('.ui-searchbar-wrap').removeClass('focus');
+    });*/
+(function(f, d, a) {     
+    d.fn.scrollGrid = function(k) {  
+        var l = d.extend({  
+            perScroll: 1,  
+            speed: 14,  
+            interval: 4000  
+        },  
+        k || {});  
+        return this.each(function() {  
+            var n = d(this),  
+            //m = n.find(">.listWrap"),  
+            o;  
+            s = n.find(">h5");//获取多少个a  
+            var getwidth=s.eq(0).css("width").replace("px","")*(s.length+1)+"px";//计算span的  
+            m.css("width",getwidth);//每个span194px宽，总宽度赋给  
+            l = d.extend({},  
+            l);  
+            l.ul = m;  
+            l.timer = o;  
+            n.data("option", l);  
+            action = function() {  
+                var t = d(this).data("option"),  
+                s = 0,  
+                r = t.ul,  
+                p = r.find("a:lt(" + t.perScroll + ")").each(function() {  
+                    s += d(this).outerWidth()  
+                }),  
+                q = p.clone().appendTo(r);  
+                r.animate({  
+                    marginLeft: "-" + Math.abs(s) + "px"  
+                },  
+                s * t.speed,  
+                function() {  
+                    p.remove();  
+                    r.css("marginLeft", "0px")  
+                })  
+            };  
+            n.bind({  
+                mouseenter: function() {  
+                    f.clearInterval(d(this).data("option").timer)  
+                },  
+                mouseleave: function() {  
+                    var p = this,  
+                    q = d(this).data("option");  
+                    q.timer = f.setInterval(function() {  
+                        action.call(p)  
+                    },  
+                    q.interval)  
+                }  
+            });  
+            n.mouseleave()  
+        })  
+    };  
+})(window, jQuery);  
+  
+jQuery(document).ready(function() {  
+    $(".ui-list-info").scrollGrid()//d("#csfBottm, #czfdxBottm").scrollGrid()  
+});  
+  
+</script>
+</body>
+</html>

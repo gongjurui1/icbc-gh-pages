@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="format-detection" content="telephone=no">
+    <title>我的学分</title>
+    <link rel="stylesheet" href="css/frozen.css">
+    <link rel="stylesheet" href="font/iconfont.css"/>
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/index.css" />
+    <script src="lib/zepto.min.js"></script>
+    <script src="js/frozen.js"></script>
+    <script src="js/select.js"></script>
+
+    <style>
+    .select-score {
+        line-height: 24px;
+        margin: 0 0 0 15px;
+        padding:2px 6px;
+        width:42px;
+        background: #fff;
+        border-radius: 3px;
+        position: relative;
+    }
+    .select-score .txt{
+        height:24px;
+        width:40px;
+        border:0;
+        font-size: 14px;
+    }
+    .hide {
+        display: none;
+    }
+    
+    .arrow {
+        display: block;
+        position: absolute;
+        right: 2px;
+        top: 12px;
+        height: 0;
+        width: 0;
+        border-style: solid;
+        border-width: 5px;
+        border-color: #777 transparent transparent transparent;
+    }
+    
+    .select {
+        display: none;
+        position: fixed;
+        left: 10%;
+        top: 90px;
+        z-index: 1;
+        width: 80%;
+        max-height:80%;
+        overflow-y: scroll;
+        overflow-x: hidden;
+        background: none;
+        border:1px #ccc solid;
+        border-radius: 5px;
+        box-shadow: 1px 1px 1px 2px #eee;
+    }
+    
+    .select a {
+        padding: 5px 10px;
+        color: #111;
+        background: #fff;
+        display: block;
+        border-bottom: 1px #aaa solid;
+    }
+    
+    .select a:hover {
+        color:#111;
+        background: #ccc;
+    }
+    .select a:last-child{
+        border:0;
+    }
+    </style>
+    <script src="js/select.js"></script>
+
+    <style>
+    .select-score {
+        line-height: 24px;
+        margin: 0 0 0 15px;
+        padding:2px 6px;
+        width:42px;
+        background: #fff;
+        border-radius: 3px;
+        position: relative;
+    }
+    .select-score .txt{
+        height:24px;
+        width:40px;
+        border:0;
+        font-size: 14px;
+    }
+    .hide {
+        display: none;
+    }
+    
+    .arrow {
+        display: block;
+        position: absolute;
+        right: 2px;
+        top: 12px;
+        height: 0;
+        width: 0;
+        border-style: solid;
+        border-width: 5px;
+        border-color: #777 transparent transparent transparent;
+    }
+    
+    .select {
+        display: none;
+        position: fixed;
+        left: 10%;
+        top: 90px;
+        z-index: 1;
+        width: 80%;
+        max-height:80%;
+        overflow-y: scroll;
+        overflow-x: hidden;
+        background: none;
+        border:1px #999 solid;
+        border-radius: 5px;
+        box-shadow: 0 0 5px #535658;
+    }
+    
+    .select a {
+        padding: 5px 10px;
+        color: #111;
+        background: #fff;
+        display: block;
+        border-bottom: 1px #aaa solid;
+    }
+    
+    .select a:hover {
+        color:#111;
+        background: #ccc;
+    }
+    .select a:last-child{
+        border:0;
+    }
+    </style>
+</head>
+
+<body ontouchstart>
+    <header class="ui-header ui-header-positive ui-border-b ui-header-padding">
+        <i class="iconfont size-21 ui-icon-return" onclick="history.back()"></i>
+        <h1>我的学分</h1>
+    </header>
+    <section class="ui-container learn-dangan">
+        <div class="ui-searchbar-wrap ui-border-b">
+            <form action="#">
+                <div class="select-width select-score">
+                    <select class="">
+                        <option>2014</option>
+                        <option selected>2015</option>
+                        <option>2016</option>
+                    </select>
+                </div>
+            </form>
+            <div class="ui-searchbar ui-border-radius">
+                <i class="iconfont ui-icon-search size-18"></i>
+                <div class="ui-searchbar-text">请输入课程名称</div>
+                <div class="ui-searchbar-input">
+                    <input  value="" type="tel" placeholder="请输入课程名称" autocapitalize="off">
+                </div>
+                <i class="iconfont ui-icon-close"></i>
+            </div>
+            <button class="ui-searchbar-cancel">搜索</button>
+        </div>
+        <style>
+            .score-sum {
+                background: #fff;
+                padding: 10px;
+                position: relative;
+            }
+            /*.score-sum .left{
+                height: 48px;
+                width: 48px;
+                text-align: center;
+                overflow: hidden;
+                line-height: 48px;
+                border-radius: 25%;
+                border: 1px #aaa solid;
+                color: #a00;
+                font-weight: bold;
+            }
+            .score-sum .right{
+                position: absolute;
+                left:55px;  
+                top:19px; 
+                /!* display: -webkit-box;
+                -webkit-box-align: center;         
+                     box-align: center;     *!/
+            }
+            .score-sum .right h3{
+                text-align: center;
+                font-weight: bold;
+                line-height: 32px;
+            }
+            .score-sum .right p{
+                margin-top: -5px;
+                font-size: 12px;
+                color: #aaa;
+            }*/
+            .score-sum {
+                background: #fff;
+                position: relative;
+                width: 100%;
+                height: 50px;
+            }
+            .score-sun-center{
+                position: absolute;
+                left: 50%;
+                top: 10px;
+                margin-left: -115px;
+            }
+            .score-sum .left{
+                display: inline-block;
+                height: 48px;
+                width: 48px;
+                text-align: center;
+                overflow: hidden;
+                line-height: 48px;
+                border-radius: 25%;
+                border: 1px #aaa solid;
+                color: #a00;
+                font-weight: bold;
+            }
+            .score-sum .right{
+                display: inline-block;
+
+            }
+            .score-sum .right h3{
+                text-align: center;
+                font-weight: bold;
+                line-height: 32px;
+            }
+            .score-sum .right p{
+                margin-top: -5px;
+                font-size: 12px;
+                color: #aaa;
+            }
+        </style>
+        <div class="score-sum ui-margintop">
+            <div class="score-sun-center">
+                <div class="right">
+                    <h3>总学分</h3>
+                    <p>(含PC和移动)</p>
+                </div>
+                <div class="left">1000</div>
+            </div>
+        </div>
+
+        <!--main-->
+        <ul class="ui-list  ui-border-tb ui-margintop" id="xuefen">
+            <li class="ui-border-t border-bottom margin-padding-10">
+                <label class="ui-checkbox-s verti-align">
+                    <input type="checkbox">
+                </label>
+                <div class="ui-list-info">
+                    <h4 class="ui-nowrap">客户经理班,从0开始迅速培养能力能力</h4>
+                    <div class="ui-nowrap nowrap-height ui-row-flex color-font">
+                        <div class="ui-col">
+                            学习方式：移动+PC
+                        </div>
+                        <div class="ui-col">时间：2016-08-09</div>
+                    </div>
+                    <div class="ui-nowrap nowrap-height ui-row-flex color-font">
+                        <div class="ui-col red">
+                            获得学分：2分
+                        </div>
+                        <div class="ui-col red">成绩：60分</div>
+                    </div>
+                </div>
+            </li>
+            <li class="ui-border-t border-bottom margin-padding-10">
+                <label class="ui-checkbox-s verti-align">
+                    <input type="checkbox">
+                </label>
+                <div class="ui-list-info">
+                    <h4 class="ui-nowrap">客户经理班,从0开始迅速培养能力能力</h4>
+                    <div class="ui-nowrap nowrap-height ui-row-flex color-font">
+                        <div class="ui-col">
+                            学习方式：移动+PC
+                        </div>
+                        <div class="ui-col">时间：2016-08-09</div>
+                    </div>
+                    <div class="ui-nowrap nowrap-height ui-row-flex color-font">
+                        <div class="ui-col red">
+                            获得学分：2分
+                        </div>
+                        <div class="ui-col red">成绩：60分</div>
+                    </div>
+                </div>
+            </li>
+            <li class="ui-border-t border-bottom margin-padding-10">
+                <label class="ui-checkbox-s verti-align">
+                    <input type="checkbox">
+                </label>
+                <div class="ui-list-info">
+                    <h4 class="ui-nowrap">客户经理班,从0开始迅速培养能力能力</h4>
+                    <div class="ui-nowrap nowrap-height ui-row-flex color-font">
+                        <div class="ui-col">
+                            学习方式：移动+PC
+                        </div>
+                        <div class="ui-col">时间：2016-08-09</div>
+                    </div>
+                    <div class="ui-nowrap nowrap-height ui-row-flex color-font">
+                        <div class="ui-col red">
+                            获得学分：2分
+                        </div>
+                        <div class="ui-col red">成绩：60分</div>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </section>
+    <script>
+    $('.ui-list li,.ui-tiled li').click(function() {
+        if ($(this).data('href')) {
+            location.href = $(this).data('href');
+        }
+    });
+    /*搜索*/
+    $('.ui-searchbar').tap(function() {
+        $('.ui-searchbar-wrap').addClass('focus');
+        $('.ui-searchbar-input input').focus();
+    });
+    $('.ui-icon-close').click(function(){
+        $('.ui-searchbar-input').children('input').val('');
+    });
+
+
+
+
+    //模拟select
+    $('.select-score').WSelect({
+        placeholder:"年份:",
+        fn:function(i){
+            console.log("用户自定义方法执行"+i);
+        }
+    });
+
+    </script>
+</body>
+
+</html>

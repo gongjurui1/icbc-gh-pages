@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="format-detection" content="telephone=no">
+    <title>评估结果页</title>
+    <link rel="stylesheet" href="../css/frozen.css">
+    <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="../css/header.css">
+    <script src="../lib/zepto.min.js"></script>
+    <script src="../js/frozen.js"></script>
+    <script>
+    $(function() {
+        //页面跳转
+        $('.ui-btn-wrap button').click(function() {
+            if ($(this).data('href')) {
+                location.href = $(this).data('href');
+            }
+        });
+    })
+    </script>
+</head>
+
+<body>
+    <header class="ui-header ui-header-positive ui-border-b ui-header-padding">
+        <i class="ui-icon-return" onclick="history.back()"></i>
+        <h1>评估结果页</h1>
+    </header>
+    <!-- class="pinggu"作为此页面标记 -->
+    <section class="ui-container test-tips pinggu">
+        <div class="danxuan">
+             <div class="type red">单选题</div>   
+             <div class="top-info class="ui-row"">
+                 <span class="ui-col ui-col-50">问题及选项</span>
+                 <span class="ui-col ui-col-50 text-align-right">回答人数</span>
+             </div>
+             <p class="question-title">1、从下面选择一项正确的？</p>
+             <ul class="questiones">
+                 <li class="ui-row active">
+                     <span class="ui-col ui-col-50">第一个选项</span>
+                     <span class="ui-col ui-col-50 text-align-right">3人</span>
+                 </li>
+                 <li class="ui-row">
+                     <span class="ui-col ui-col-50">第一个选项</span>
+                     <span class="ui-col ui-col-50 text-align-right">3人</span>
+                 </li>
+                 <li class="ui-row">
+                     <span class="ui-col ui-col-50">第一个选项</span>
+                     <span class="ui-col ui-col-50 text-align-right">3人</span>
+                 </li>
+             </ul>
+        </div>
+
+        <div class="ui-btn-wrap renshu">
+            被调查总人数: 5人
+        </div>
+        <div class="ui-btn-wrap">
+            <button class="ui-btn-lg ui-btn-danger close-btn">
+                关闭
+            </button>
+        </div>
+        <script type="text/javascript">
+            $('.close-btn').tap(function(){
+                history.back()
+            });
+        </script>
+    </section>
+</body>
+
+</html>

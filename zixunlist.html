@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="format-detection" content="telephone=no">
+    <title>资讯列表</title>
+
+    <link rel="stylesheet" href="css/frozen.css">
+    <link rel="stylesheet" href="font/iconfont.css">
+    <link rel="stylesheet" href="css/zixun-list.css"/>
+    <link rel="stylesheet" href="css/header.css">
+    <script src="lib/zepto.min.js"></script>
+    <script src="js/frozen.js"></script>
+
+
+</head>
+
+<body ontouchstart>
+<header class="ui-header ui-header-positive ui-border-b ui-header-padding">
+    <i class="iconfont ui-icon-return size-21" onclick="history.back()"></i>
+    <h1>资讯</h1>
+    <i class="iconfont ui-icon-search ui-icon-position size-26" data-href="history.html"></i>
+</header>
+<footer class="footer">
+    中国工商银行版权所有　京ICP证 030247号
+</footer>
+<section class="ui-container zixun-list">
+    <ul class="ui-list ui-list-one ui-list-link ui-border-tb ui-weilei">
+        <li class="ui-border-t" data-href="zixundetail.html">
+            <div class="ui-avatar-s small-tou">
+                <span></span>
+            </div>
+            <div class="ui-list-info">
+                <h4 class="ui-nowrap">客户经理市场营销专项通</h4>
+                <div class="ui-txt-info">2016-07-31</div>
+            </div>
+        </li>
+        <li class="ui-border-t" data-href="zixundetail.html">
+            <div class="ui-avatar-s small-tou" >
+                <span></span>
+            </div>
+            <div class="ui-list-info">
+                <h4 class="ui-nowrap">关于开展2016年度员工合规教育网络培训的通知</h4>
+                <div class="ui-txt-info">2016-07-31</div>
+            </div>
+        </li>
+        <li class="ui-border-t" data-href="zixundetail.html">
+            <div class="ui-avatar-s small-tou">
+                <span></span>
+            </div>
+            <div class="ui-list-info">
+                <h4 class="ui-nowrap">客户经理市场营销专项通</h4>
+                <div class="ui-txt-info">2016-07-31</div>
+            </div>
+        </li>
+
+        <li class="ui-border-t" data-href="zixundetail.html">
+            <div class="ui-avatar-s small-tou">
+                <span></span>
+            </div>
+            <div class="ui-list-info">
+                <h4 class="ui-nowrap">客户经理市场营销专项通</h4>
+                <div class="ui-txt-info">2016-07-31</div>
+            </div>
+        </li>
+    </ul>
+</section>
+
+<script>
+
+
+    $('.ui-list li,.ui-tiled li,.ui-icon-search ').click(function () {
+
+        if ($(this).data('href')) {
+            location.href = $(this).data('href');
+        }
+    });
+
+</script>
+</body>
+</html>
